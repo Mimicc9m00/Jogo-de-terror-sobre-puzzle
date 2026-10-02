@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dnqm4b3vurgtw"]
+
+[ext_resource type="PackedScene" uid="uid://dp0384wd4a570" path="res://Cenarios/wooden-house-with-rusty-roof-3d-model-free/source/ab7a4f25-1aaa-414e.glb" id="1_k5lew"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d0u6y"]
+
+[node name="house" unique_id=1959958270 instance=ExtResource("1_k5lew")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=435215134]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=85636087]
+transform = Transform3D(0.6385345, 0, 0, 0, 1, 0, 0, 0, 1, -0.121298015, 0.65830386, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." index="2" unique_id=186262336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" index="0" unique_id=1926933632]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.009883308, 0, 0, 0, -0.15571463, 0.4779551, 0.0357543, 0.0390232)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." index="3" unique_id=1750362718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14644647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" index="0" unique_id=1126793843]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.009883308, 0, 0, 0, -0.15571463, 0.4423181, 0.20923865, 0.0390232)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." index="4" unique_id=451869794]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" index="0" unique_id=1390449155]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.009883308, 0, 0, 0, -0.15571463, 0.41437656, 0.091992564, 0.0390232)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="." index="5" unique_id=79415463]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5" index="0" unique_id=336699628]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.009883308, 0, 0, 0, -0.15571463, 0.38326436, 0.11918313, 0.0390232)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="." index="6" unique_id=788045917]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7" index="0" unique_id=597909472]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.14575759, 0, 0, 0, -0.24632235, 0.3517096, 0.2119646, 0.2587098)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="." index="7" unique_id=1788714169]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8" index="0" unique_id=1799942764]
+transform = Transform3D(0.009081312, 0, 0, 0, -0.14575759, 0, 0, 0, -0.34773305, 0.3517096, 0.2119646, -0.21425006)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="." index="8" unique_id=163897205]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9" index="0" unique_id=1368382940]
+transform = Transform3D(-6.75746e-05, 0, -0.15605468, 0, -0.1457576, 0, -0.009043657, 0, 0.001166048, 0.28065157, 0.2119646, -0.381428)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="." index="9" unique_id=1204158262]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D10" index="0" unique_id=150979435]
+transform = Transform3D(-6.75746e-05, 0, -0.15605468, 0, -0.1457576, 0, -0.009043657, 0, 0.001166048, 0.28065157, 0.2119646, 0.38203838)
+shape = SubResource("BoxShape3D_d0u6y")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." index="10" unique_id=1815593148]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" index="0" unique_id=592213690]
+transform = Transform3D(0.19519441, 0, 0, 0, -0.009883308, 0, 0, 0, -0.77755153, 0.26641214, 0.14368486, 0.0020274147)
+shape = SubResource("BoxShape3D_d0u6y")

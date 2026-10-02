@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7n7ywbcus6lc"]
+
+[ext_resource type="Script" uid="uid://b30j2vv3flvn3" path="res://areade_esconderijo.gd" id="1_7s05u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1, 1.0770264, 1)
+
+[node name="Area" type="Area3D" unique_id=1107868956]
+script = ExtResource("1_7s05u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1964747889]
+transform = Transform3D(1.2638583, 0, 0, 0, 2.0123994, 0, 0, 0, 0.9630447, 0, -0.21051222, -0.08761716)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="dentro" type="Marker3D" parent="." unique_id=869136459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="fora" type="Marker3D" parent="." unique_id=1865476949]
+transform = Transform3D(-0.9999693, 0, -0.007838082, 0, 1, 0, 0.007838082, 0, -0.9999693, 0, 0, 0)
+
+[node name="PontoCamera" type="Marker3D" parent="." unique_id=68804951]
+transform = Transform3D(-0.99999714, 0, -0.0023876724, 0, 1, 0, 0.0023876724, 0, -0.99999714, 0, 0, -0.9840428)

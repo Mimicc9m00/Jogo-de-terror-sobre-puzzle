@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bp03jucfqr57h"]
+
+[ext_resource type="Script" uid="uid://cnyv2gnlucs67" path="res://Cenarios/PistasPuzzle/pista.gd" id="1_uuci1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_g4v7s"]
+
+[node name="Pista3" type="Area3D" unique_id=54512737]
+script = ExtResource("1_uuci1")
+texto_pista = "Quando a luz desaparecer,
+a lua tomará seu lugar."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=396749395]
+shape = SubResource("SphereShape3D_yf5fn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1991043697]
+transform = Transform3D(0.2561997, 0, 0, 0, -1.1198846e-08, 0.25619975, 0, -0.25619975, -1.1198846e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_g4v7s")

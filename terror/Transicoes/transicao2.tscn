@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bpfoyj2dr5ol6"]
+
+[ext_resource type="Script" uid="uid://jq4etiikfsh0" path="res://Transicoes/transicao_2.gd" id="1_e4cww"]
+[ext_resource type="AudioStream" uid="uid://bc0uj3ctkimu3" path="res://Sons/trancisao/transition1.mp3" id="2_ier1y"]
+[ext_resource type="Texture2D" uid="uid://c8p2u2k5bm8c6" path="res://Textos/quem e voce.png" id="3_e4cww"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="4_c3xky"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihd1r"]
+shader = ExtResource("4_c3xky")
+
+[node name="transicao2" type="Control" unique_id=163902740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4cww")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1777738428]
+layout_mode = 0
+offset_right = 1910.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=894147331]
+stream = ExtResource("2_ier1y")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=495726841]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=314690760]
+material = SubResource("ShaderMaterial_ihd1r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)
+
+[node name="QuemEVoce" type="Sprite2D" parent="." unique_id=90697410]
+position = Vector2(959, 509.00006)
+scale = Vector2(0.50572735, 0.52030456)
+texture = ExtResource("3_e4cww")

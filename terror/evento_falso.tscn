@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dl3i5xrsa2a82"]
+
+[ext_resource type="Script" uid="uid://ban3fptrfidh" path="res://evento_falso.gd" id="1_dvsio"]
+[ext_resource type="AudioStream" uid="uid://dl2w1i8ilcqw5" path="res://Sons/Ato3/Folhas.mp3" id="4_lbbk1"]
+[ext_resource type="AudioStream" uid="uid://bjwgj8o34hhb8" path="res://Sons/Ato3/PAssos.mp3" id="5_1ga2p"]
+
+[node name="EventoFalso" type="Node3D" unique_id=2072527619]
+script = ExtResource("1_dvsio")
+
+[node name="SomFolhas" type="AudioStreamPlayer3D" parent="." unique_id=716977522]
+stream = ExtResource("4_lbbk1")
+volume_db = -1.074
+max_db = 1.188
+
+[node name="SomPassos" type="AudioStreamPlayer3D" parent="." unique_id=1725084739]
+stream = ExtResource("5_1ga2p")
+volume_db = -7.355
+max_db = 1.792

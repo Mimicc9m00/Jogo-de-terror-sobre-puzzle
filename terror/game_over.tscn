@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bts2sxavcjf82"]
+
+[ext_resource type="Texture2D" uid="uid://j4ibtuimlvpf" path="res://Textos/Game Over.png" id="1_y26ei"]
+[ext_resource type="Script" uid="uid://d2304ouodifgp" path="res://Transicoes/transicao_3.gd" id="1_yxx3c"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="3_ccer4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8u835"]
+shader = ExtResource("3_ccer4")
+
+[node name="GameOver" type="Control" unique_id=2144825044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yxx3c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=46896846]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.05255, 27.23427)
+color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Sprite2D" parent="." unique_id=1135746486]
+position = Vector2(921, 524)
+texture = ExtResource("1_y26ei")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=837350696]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1625658836]
+material = SubResource("ShaderMaterial_8u835")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)

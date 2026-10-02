@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bsqln6vaep20k"]
+
+[ext_resource type="PackedScene" uid="uid://dkdbdny5dfxyt" path="res://Trees/Meshes/Meshes/Tree_002.fbx" id="1_xbk8o"]
+[ext_resource type="Texture2D" uid="uid://bcqp40biyr520" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002.png" id="2_27tlh"]
+[ext_resource type="Texture2D" uid="uid://efqu6e4oio2f" path="res://Trees/Textures (1)/Textures/Nature_Grass/Nature_Grass.PNG" id="3_2k8lc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejycl"]
+albedo_texture = ExtResource("2_27tlh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xywl7"]
+albedo_texture = ExtResource("3_2k8lc")
+
+[node name="Tree_002" unique_id=762808221 instance=ExtResource("1_xbk8o")]
+
+[node name="Trunk" parent="." index="0" unique_id=468928280]
+material_override = SubResource("StandardMaterial3D_ejycl")
+
+[node name="Leaf" parent="." index="1" unique_id=863358941]
+material_override = SubResource("StandardMaterial3D_xywl7")

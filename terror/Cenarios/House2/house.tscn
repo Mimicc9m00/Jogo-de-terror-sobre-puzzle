@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://brxm62yl3ddsd"]
+
+[ext_resource type="PackedScene" uid="uid://dsxtun8ie2wb8" path="res://Cenarios/House2/house.fbx" id="1_qf50p"]
+[ext_resource type="Texture2D" uid="uid://c57cr36yy3wja" path="res://Trees/Textures (1)/Textures/Wood/Wood_Old/OldWood.png" id="2_tluh3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r2nvn"]
+albedo_texture = ExtResource("2_tluh3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="house" unique_id=1795674246 instance=ExtResource("1_qf50p")]
+
+[node name="House" parent="." index="0" unique_id=983324699]
+transform = Transform3D(15.7075815, 0, 0, 0, 15.7075815, 1.1858893e-06, 0, -1.1858893e-06, 15.7075815, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_r2nvn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1606261288]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=772219422]
+transform = Transform3D(1.096388, 0, 0, 0, 1.3159169, 0, 0, 0, 1.632253, -0.0154742, 0.61132735, 0)
+shape = SubResource("BoxShape3D_g4v7s")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://5f6v36wdu14n"]
+
+[ext_resource type="PackedScene" uid="uid://co7jp5cgychky" path="res://Trees/Meshes/Meshes/Shrub.fbx" id="1_d72s4"]
+[ext_resource type="Texture2D" uid="uid://bcqp40biyr520" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002.png" id="2_yryc6"]
+[ext_resource type="Texture2D" uid="uid://efqu6e4oio2f" path="res://Trees/Textures (1)/Textures/Nature_Grass/Nature_Grass.PNG" id="3_bgpm6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kcpt"]
+albedo_texture = ExtResource("2_yryc6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dnke"]
+albedo_texture = ExtResource("3_bgpm6")
+
+[node name="Shrub" unique_id=1270754687 instance=ExtResource("1_d72s4")]
+
+[node name="Vert" parent="." index="0" unique_id=2099431168]
+material_override = SubResource("StandardMaterial3D_0kcpt")
+
+[node name="Plane" parent="." index="1" unique_id=1264580761]
+material_override = SubResource("StandardMaterial3D_8dnke")

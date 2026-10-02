@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clg3ggygkrew2"
+path="res://.godot/imported/passos jogador.mp3-86c8c2f1b10098b07283445abb99b146.mp3str"
+
+[deps]
+
+source_file="res://Sons/Ato2/passos jogador.mp3"
+dest_files=["res://.godot/imported/passos jogador.mp3-86c8c2f1b10098b07283445abb99b146.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

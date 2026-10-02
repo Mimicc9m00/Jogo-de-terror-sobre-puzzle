@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c7hxgwqwhwsn"]
+
+[ext_resource type="Script" uid="uid://di4psaih1frqx" path="res://cena_2.gd" id="1_stdu2"]
+[ext_resource type="Texture2D" uid="uid://c6volo8rpcrbd" path="res://Textos/Texto1.png" id="2_435js"]
+[ext_resource type="AudioStream" uid="uid://dlnxcmxnykik0" path="res://Sons/CenaDeTrasicao1/transicao1.mp3" id="3_fum61"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="4_fum61"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihd1r"]
+shader = ExtResource("4_fum61")
+
+[node name="Control" type="Control" unique_id=163902740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_stdu2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1777738428]
+layout_mode = 0
+offset_right = 1910.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="Texto1" type="Sprite2D" parent="." unique_id=1062010902]
+position = Vector2(950.87506, 496.75)
+scale = Vector2(0.2563171, 0.41184205)
+texture = ExtResource("2_435js")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=894147331]
+stream = ExtResource("3_fum61")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=495726841]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=314690760]
+material = SubResource("ShaderMaterial_ihd1r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)

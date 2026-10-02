@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://5kxnq65o23mb"]
+
+[ext_resource type="PackedScene" uid="uid://bo1ftmgdoimp3" path="res://Cenarios/Crusificado/sculptjanuary2021_-_day_27_-_dead_eyes.glb" id="1_krqaf"]
+[ext_resource type="Texture2D" uid="uid://fqp0vcmssmvw" path="res://Trees/Textures (1)/Textures/TreeBark_001/TreeBark_001-white.png" id="2_uenhb"]
+[ext_resource type="Texture2D" uid="uid://dis4iunvkmw4f" path="res://Trees/Textures (1)/Textures/TreeBark_001/TreeBark_001_s.png" id="3_xpkyw"]
+[ext_resource type="Texture2D" uid="uid://c57cr36yy3wja" path="res://Trees/Textures (1)/Textures/Wood/Wood_Old/OldWood.png" id="4_bimfb"]
+[ext_resource type="Texture2D" uid="uid://bcqp40biyr520" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002.png" id="5_7ovio"]
+[ext_resource type="Texture2D" uid="uid://d10haqsjcjmff" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002-smoothness.png" id="6_7keg5"]
+[ext_resource type="Texture2D" uid="uid://b6q3tbptkb0rh" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002-height.png" id="7_3ldg6"]
+[ext_resource type="Script" uid="uid://c2h1mkfxek4k3" path="res://Cenarios/Crusificado/area_3d.gd" id="8_xpkyw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpq0v"]
+albedo_texture = ExtResource("2_uenhb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akqxi"]
+albedo_texture = ExtResource("3_xpkyw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qypt4"]
+albedo_texture = ExtResource("4_bimfb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_611x7"]
+albedo_texture = ExtResource("5_7ovio")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmkow"]
+albedo_texture = ExtResource("6_7keg5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nk1xp"]
+albedo_texture = ExtResource("5_7ovio")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dknn"]
+albedo_texture = ExtResource("7_3ldg6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="Sketchfab_Scene" unique_id=835167180 instance=ExtResource("1_krqaf")]
+
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_2" parent_id_path=PackedInt32Array(373672588) index="0" unique_id=194285646]
+material_override = SubResource("StandardMaterial3D_mpq0v")
+
+[node name="Object_5" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_2" parent_id_path=PackedInt32Array(373672588) index="1" unique_id=864847578]
+material_override = SubResource("StandardMaterial3D_akqxi")
+
+[node name="Object_7" parent="Sketchfab_model/root/GLTF_SceneRootNode/Mball_012_3" parent_id_path=PackedInt32Array(914550297) index="0" unique_id=764060112]
+material_override = SubResource("StandardMaterial3D_qypt4")
+
+[node name="Object_8" parent="Sketchfab_model/root/GLTF_SceneRootNode/Mball_012_3" parent_id_path=PackedInt32Array(914550297) index="1" unique_id=1705201813]
+material_override = SubResource("StandardMaterial3D_611x7")
+
+[node name="Object_9" parent="Sketchfab_model/root/GLTF_SceneRootNode/Mball_012_3" parent_id_path=PackedInt32Array(914550297) index="2" unique_id=89071179]
+material_override = SubResource("StandardMaterial3D_wmkow")
+
+[node name="Object_12" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cylinder_001_4" parent_id_path=PackedInt32Array(239958657) index="0" unique_id=1663938011]
+material_override = SubResource("StandardMaterial3D_nk1xp")
+
+[node name="Object_14" parent="Sketchfab_model/root/GLTF_SceneRootNode/Sphere_5" parent_id_path=PackedInt32Array(406902915) index="0" unique_id=605125920]
+material_override = SubResource("StandardMaterial3D_4dknn")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1319668890]
+script = ExtResource("8_xpkyw")
+proxima_cena = "uid://c7hxgwqwhwsn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1870266752]
+transform = Transform3D(12.187872, 0, 0, 0, 16.282616, 0, 0, 0, 18.893204, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")

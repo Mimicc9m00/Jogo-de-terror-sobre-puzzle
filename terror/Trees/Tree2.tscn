@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://clekvxemnh63r"]
+
+[ext_resource type="PackedScene" uid="uid://bd3vxif6cj787" path="res://Trees/Meshes/Meshes/Tree_005.fbx" id="1_frmqf"]
+[ext_resource type="Texture2D" uid="uid://bcqp40biyr520" path="res://Trees/Textures (1)/Textures/TreeBark_002/TreeBark_002.png" id="2_e44xr"]
+[ext_resource type="Texture2D" uid="uid://efqu6e4oio2f" path="res://Trees/Textures (1)/Textures/Nature_Grass/Nature_Grass.PNG" id="3_6no0i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckh4d"]
+albedo_texture = ExtResource("2_e44xr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7t0w4"]
+albedo_texture = ExtResource("3_6no0i")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4uwrw"]
+
+[node name="Tree_005" unique_id=17154336 instance=ExtResource("1_frmqf")]
+
+[node name="TRUNK" parent="." index="0" unique_id=148081288]
+material_override = SubResource("StandardMaterial3D_ckh4d")
+
+[node name="leaf_003" parent="." index="1" unique_id=19539734]
+material_override = SubResource("StandardMaterial3D_7t0w4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=616323174]
+transform = Transform3D(0.16072373, 0, 0, 0, 1, 0, 0, 0, 0.18152307, 0.087585926, 0, 0.20887876)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=831856618]
+transform = Transform3D(6.5588255, 0, 0, 0, 7.26, 0, 0, 0, 6.7218847, 0, 4, -1)
+shape = SubResource("CapsuleShape3D_4uwrw")

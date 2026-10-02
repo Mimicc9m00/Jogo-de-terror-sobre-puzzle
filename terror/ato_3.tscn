@@ -1,0 +1,1835 @@
+[gd_scene format=4 uid="uid://ch0ck3q27sqwr"]
+
+[ext_resource type="PackedScene" uid="uid://c5jovas5qasak" path="res://Cenarios/labririnto/root_scene.tscn" id="2_a3ys3"]
+[ext_resource type="PackedScene" uid="uid://kv37xss8biiu" path="res://Player.tscn" id="3_0t4ib"]
+[ext_resource type="Texture2D" uid="uid://5224ddeb10i1" path="res://TexturasDeTerreno/TerraComGrama/2K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="3_a3ys3"]
+[ext_resource type="Script" uid="uid://hbmyiqfbx36o" path="res://passos_labirinto.gd" id="4_a3ys3"]
+[ext_resource type="Script" uid="uid://dajoeppdmn374" path="res://areade_evento.gd" id="6_5yiln"]
+[ext_resource type="PackedScene" uid="uid://dl3i5xrsa2a82" path="res://evento_falso.tscn" id="6_xkcxi"]
+[ext_resource type="Script" uid="uid://3nn10ya53jju" path="res://evento_1.gd" id="7_5yiln"]
+[ext_resource type="PackedScene" uid="uid://bok537u0qp2sd" path="res://Cenarios/bixaodacenadevideo1/horror_humanoid_creature.glb" id="8_ltuwf"]
+[ext_resource type="Script" uid="uid://bdcg6luo2wndr" path="res://Cenarios/bixaodacenadevideo1/vultoevento.gd" id="8_xf4dr"]
+[ext_resource type="Script" uid="uid://dq1v364mpmwto" path="res://evento.gd" id="8_y5kid"]
+[ext_resource type="AudioStream" uid="uid://bxagcijicd6y3" path="res://Sons/Ato3/Vulto.mp3" id="9_xf4dr"]
+[ext_resource type="Texture2D" uid="uid://ch5dodnpuj6lo" path="res://Cenarios/Minas/Textures/Box.png" id="12_bpmtc"]
+[ext_resource type="Texture2D" uid="uid://ti1vn43a4dth" path="res://Cenarios/Minas/Textures/Rocks_W.jpg" id="13_68gah"]
+[ext_resource type="Texture2D" uid="uid://kpkhp31r53ou" path="res://Cenarios/Main.jpg" id="14_ed42d"]
+[ext_resource type="Script" uid="uid://bvrr8wwl31rix" path="res://fimdo_labririnto.gd" id="15_ed42d"]
+[ext_resource type="Texture2D" uid="uid://dx8fjamphyeyu" path="res://Textos/IMG_20260227_185007.jpg" id="16_ujcmx"]
+[ext_resource type="AudioStream" uid="uid://dg1f6kghrykui" path="res://Sons/Ato3/musica de terror 1.mp3" id="17_3jbtq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rsm7"]
+albedo_texture = ExtResource("3_a3ys3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a3ys3"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(2.9468994, 9.644867, 40.231903)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+size = Vector3(1.6362915, 2.111206, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhas2"]
+resource_name = "Box"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("12_bpmtc")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_82lxh"]
+_surfaces = [{
+"aabb": AABB(-0.013467857, -0.023399845, -0.013467857, 0.027358126, 0.042654425, 0.026438817),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAQAAAAQABAAAAAMABQACAAEAAwACAAUABAAGAAEAAQAGAAUAAwAHAAQABgAEAAcABQAHAAMABwAFAAYA"),
+"name": "Box",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("SahcvMm7nTwmhFQ8SahcvAixv7wmhFQ8SahcvAixv7xJqFy8SahcvMm7nTxJqFy8A5RjPMm7nTwmhFQ8A5RjPAixv7xJqFy8A5RjPAixv7wmhFQ8A5RjPMm7nTxJqFy8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_68gah"]
+resource_name = "Box"
+_surfaces = [{
+"aabb": AABB(-0.013467857, -0.023399845, -0.013467857, 0.027358126, 0.042654425, 0.026438817),
+"attribute_data": PackedByteArray("cJpzP2Txfz9xmnM/ng4AP7hVJD+eDgA/uFUkP2Txfz+qMiA/xOL/PqwyID88rDc+5duhPjysNz7l26E+xOL/Pqumnj4A0Gk5rKaePsbi/z5v1Gk5xuL/PkvaaTkA0Gk5/xFxPzysNz7+EXE/xOL/PkbNIT/E4v8+R80hPzysNz5KmyQ/Y/F/P0qbJD+eDgA/7ymlPp4OAD/vKaU+Y/F/P1VkpD5j8X8/VWSkPp4OAD99OCQ/ng4AP304JD9j8X8/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_uhas2"),
+"name": "Box",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("SahcvMm7nTwmhFQ8SahcvAixv7wmhFQ8SahcvAixv7xJqFy8SahcvMm7nTxJqFy8A5RjPMm7nTwmhFQ8SahcvMm7nTwmhFQ8SahcvMm7nTxJqFy8A5RjPMm7nTxJqFy8A5RjPAixv7wmhFQ8A5RjPMm7nTwmhFQ8A5RjPMm7nTxJqFy8A5RjPAixv7xJqFy8SahcvAixv7wmhFQ8A5RjPAixv7wmhFQ8A5RjPAixv7xJqFy8SahcvAixv7xJqFy8A5RjPAixv7xJqFy8A5RjPMm7nTxJqFy8SahcvMm7nTxJqFy8SahcvAixv7xJqFy8SahcvAixv7wmhFQ8SahcvMm7nTwmhFQ8A5RjPMm7nTwmhFQ8A5RjPAixv7wmhFQ8AAD/f/9//z8AAP9//3//PwAA/3//f/8/AAD/f/9//z//f////3//P/9/////f/8//3////9//z//f////3//P////3//f/+/////f/9//7////9//3//v////3//f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//////////P/////////8//////////z//////////P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_82lxh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi54s"]
+resource_name = "Rocks_W"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("13_68gah")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d2ayk"]
+_surfaces = [{
+"aabb": AABB(-0.049477972, -0.012527602, -0.002539463, 0.0990007, 0.026723538, 0.058889914),
+"format": 34359742465,
+"index_count": 420,
+"index_data": PackedByteArray("KgArAAMAAwABACoAKgABAAIAAwArACwALAAFAAMALQArACoALAArAC0ABgAFACwAKgAuAC0AAgAvACoALgAqAC8AMAAvAAIAAgAKADAAMQAwAAoACgAJADEAMQAJAAYAMgAwADEALwAwADIABgAzADEALAAzAAYANAAxADMAMQA0ADIANQAzACwAMwA1ADQALAA2ADUALQA2ACwACAA0ADUAMgA0AAgAGwA1ADYANQAbAAgANgAtACAAIAAtAC4ANgAEABsAIAAEADYAGwAEAB8ABAAgACEAIQAfAAQALgAAACAADgAhACAAIAAAAA4AAAAuABgALwAYAC4AMgAYAC8AGAAHAAAADgAAAAcAGAAyAAsACwAHABgACAALADIABwALABkAGQALAAgABwAaAA4AGQAaAAcADgAaADcANwAaABkACAAcABkAHAAIABsAGQAdADcAHQAZABwANwA4AA4AGwA5ABwAHwA5ABsAOgAcADkAHAA6AB0AOwA5AB8AOQA7ADoAHQA6ACIAIgA6ADsAHgA3AB0AOAA3AB4AIgAlAB0AHQAlAB4AOwA8ACIAIgA8AD0AIwA8ADsAPQA8ACMAJQAiAA0APQANACIAOwA+ACMAHwA+ADsAIwAPAD0APwA+AB8AJAAjAD4ADwAjACQAPgA/ACQAHwAhAD8APwAhAA4ADgA4AD8AJAA/ADgAOABAACQAHgBAADgAJAAmAA8AJgAkAEAAEABAAB4AQAAQACYAHgBBABAAJgAQAEIAQgAQAEEAQwAPACYAPQAPAEMADABBAB4AHgAlAAwADQAMACUAJwBBAAwAQQAnAEIAKQAMAA0ADAApACcADQA9ACgAQwAoAD0ADQBEACkAKABEAA0AJwApAEUARQApAEQARgBEACgARABGAEUAKABDAEcAKABIAEYARwBIACgARgBIABQAFgAUAEgASABHABYAFAASAEYARQBGABIAEgARAEUAFwAWAEcARQARABMARwBJABcAEwBKAEUARQBKACcASgATABUAQgAnAEoASwAVABcAFQBLAEoAFwBJAEsASgBLAEIATABJAEcASwBJAEwATABCAEsARwBDAEwAQgBMACYAJgBMAEMA"),
+"lods": [0.0111123435, PackedByteArray("AgAYAAEACgAYAAIAAAABABgAAQAAAAMAGAAKAAsACAALAAoACQAIAAoACwAHABgAGAAHAAAACAAJAAYABwALABkAGQALAAgADgAAAAcAGQAaAAcABwAaAA4ABgAbAAgAGwAGAAUACAAcABkAHAAIABsAGQAdABoAHQAZABwAHgAaAB0ADgAaAB4ABQAEABsAAwAEAAUAHwAcABsAGwAEAB8ABAADACAAIAADAAAAIAAAAA4ABAAgACEAIQAfAAQADgAhACAAIgAcAB8AHQAcACIAIQAjAB8AHwAjACIAJAAhAA4AIwAhACQADgAQACQAHgAQAA4AIgAlAB0AHQAlAB4ADQAiACMAJQAiAA0ADwAjACQAIwAPAA0AHgAlAAwADAAQAB4ADQAMACUAJgAkABAAJAAmAA8AJgAQABUAFQAXACYAJgAXABYAFgAPACYAEAAnABUAJwAQAAwAJwATABUAKAAPABYADwAoAA0AFgAUACgAEgAoABQAEgANACgAEwAnACkADQASACkADAApACcAKQAMAA0AEgARACkAKQARABMA"), 0.04446024, PackedByteArray("AAABAAIAAQAAAAMABAADAAAAAwAEAAUABAAGAAUAAgAHAAAABgAEAAgACAAJAAYACQAIAAoAAgAKAAsACAALAAoACwAHAAIADAALAAgACwAMAAcADQAIAAQADAAIAA0ABAAAAA4ADgAAAAcADgAPAAQABAAPAA0ADgAHABAAEAAHAAwADgAQAA8AEQAMAA0ADQASABEADAARABMAEwAQAAwAEgANABQADwAUAA0AEAATABUADwAQABUAFAAPABYAFQAXAA8ADwAXABYA")],
+"name": "Rocks_W",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 77,
+"vertex_data": PackedByteArray("Loc7PfiUOjwSzRs9xNM8PZrvGDwfbSa7WNhKPbHUJLsfbSa73wcQPfYSRzwfbSa7MZT3PN8oRTxbXQ49Q5PRPD/SITwfbSa78e/UPJ98P7sfbSa7xVs3PZRSDzvaoDw9eLIGPUEfhLt6/Rs98U3mPJd2N7wfbSa7RZMuPT+vObwfbSa7sawqPZJah7tMsCw9WIYqvcSKAbvPki89u5gKvY+Y0LidcCQ9zy/gPMA7OzxTFlM9V8IEvRpKRjxwgRs9D08wvU+aKzwFvz49v4gqvZJATbyLIxG78U3mvJd2N7wfbSa7aqlKvZdmDbuBNSW7T0vVvJ98P7sfbSa7z8c8vUwnGjy4JCa7Q5PRvD/SITwfbSa7fc4PvTKiSzwJUSW7nZpHPRK69Drr9Zc8pbvePH/Fwrs9RT89OMLePGbtLDploV89hAj8PG9IAjsvaRY9ALaoPN89G7scgDY9pBCAuJr+UbpG0FU9AITmvOFdlTsONVw9VqypPDY0QTwjzzA9pD4ePVK6XTzzuw897DW+PBGWaDxfaUE938esvPgkCDq0VD09MeyqvD29Tzwj6DI9AWbEvJ1CXjw/OEE97/XRvH3RGLobI1M9X3YkvbukUDzfbBw9vMM/vao4/zpKe6I8uIX0vGWlQzsqQKI8hKorveWX37uWs6U8XFM0PdqI7zu6Sb47+pYRPd9wGzxyjLo76VHmPFJG/Ttfkb07WW8cPfiBRzxxw3U8fKQ7PYFWBjzCcp48DuE7PaefBLutGxM8Q0YpPSYNDrx6u9k7zGT2PHZVDLxjjdk7Jq4tPQ8y97uYRoo8OhDxPHb7DbsckM47XZQEPUC36LuTBKU8xbL4POy5QbqvXqI8pKr5PKT1DDxWRp48szgGPAr8Nzu7z2Y95K3Tuyg5UTxNml49dHqoPM6jXTsoSTE9pBCAuIVbO7oppjs9LpELumdSjzsXxDg9OG6svBI9mTtI7To9vG8GvZHVsjt9GyM9pBCAuNo0UDyO6jY9AIYPPJ0uYTyuYUE9JULgvCEWPDyINVM9RbJAvXAUETsGuTc9vMU3vQppHTxO9p08d8b9vDSXBzzj/so8mvUDvbT6tbsmbqU8COIkvUmGw7uaI+Y7MmPuvN/K67v94+Q7l37kvKEMFTyqJMA7lBHYvEiV/Dp6QdY7hcIQvUyFLzzh3bw738pFvZ+sajsMuMc7MdAyvTlrHDxohMI7ii0avc8CLjwGvJw8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4y2oa"]
+resource_name = "Rock_11"
+_surfaces = [{
+"aabb": AABB(-0.049477972, -0.012527602, -0.002539463, 0.0990007, 0.026723538, 0.058889914),
+"attribute_data": PackedByteArray("+6I7P/Q/hT50UDA/9iuRP9j23T72K5E/GugIPwCAsz1TJsw+rJIvPkh0eT72K5E/uDzNPqa9hD66cXw+9iuRP6t62T72K5E/OjI/PxRsqT7oTTM/9iuRP6e/vz/2K5E/0N++P/Q/hT5umaE/9iuRP/D5kz8UbKk+AzCHP/YrkT/EGow/AGT5vLiBRb6UC4Y+gv7XvrCxnD3Gkfm+6iiRP45+gL4CIJE/IJs7vfYrkT/KKY4/9iuRP0hRmz+mvYQ+HCi2P/YrkT8IiLM/rJIvPkJsyL5UCiA+axG8PwCAsz3c72S+ePxbPrhyyL66RpA/+GnNvfYrkT/EGow/TC+LPtDfvj+In4s+axG8P04V8T6C/te+YLSVPkJsyL5Qfw8/3O9kvsUlBT9IUZs/ZNQaP/D5kz8MgYQ+uIFFvmK+gz66cXw+9iuRP/eZ+D54/Fs+q3rZPvYrkT+Okz8/lAuGPuhNMz/2K5E/EujhPtoekT+QmDY/sLGcPd/m4z5UCiA+WbkwP+ookT9wHV8+ukaQP7QkBz98ES4/RM8HP8TCkz5uKqs/PLylPsyrgD+g+389FYVzPyhjGT6Yn2Q92BcOPoDZNrzgDoI9JBq4vsSRgz6GnYs/WAyXPbyfiz9ga8W9St9yP/B89T35/AA/wGk3vUidUD1I76s9sME/vYCK+7zSfsu+/tEkP7yfiz9N9gA/AI3OvSrv1j75/AA/CgQJP7DBP70w0Ac/SJ1QPVi8AT9K33I/z6gRPxWFcz+WKoc+rXmVP/pG8z6Yn2Q9gMR6PraVBz/E/CY/rnSuPv7RJD/9Tg0/jyQnP94Guj8sU3Q/CaaiPz70dD8gK44/MHJ0P5zyqT+mo0E/ifO+P7CzKT/KrZQ/ltEpP2KfMT+gUIA9o2q7PkBaur35/AA/uALxPUDcrL2ApP68pOQlvmK4Cz9GFuy+dAcqP0RqnL752io/MKvDvUIDdD9+vN6+AJ1zP4gPg75jkHQ/IWLjPpTWYj8OJyU/LFN0P0YOKj+wsyk/8heaPgi1bz9og6Y+U0c3P9eTkz/KvG8/zpayPwi1bz/ojbU/U0c3P3DkmT/HRyU/C34uP7BfCb75/AA/gAu+PVwzQb65ACU/+ju5vqKebT9I7/i9aNRtPwXP4T4llnE/3j+bPsq8bz/OYqs+x0clP+R2Jz8wcnQ/nIzxPgUQJz+3SCw/ltEpPwt+Lj/YPeo+o2q7PhjFeD5A3Ky9VJyKPj4OAr+ayfA+acf8Pur32D43t3I/3ufjPvn8AD94I3o++fwAPyiKCD+oYlQ9nKHVPqyJTr6YBM0+ipcQP/K8cj+AfDE/AJ1zP+nRMT90Byo/wOa3PqKebT/zDQk/UFPoPcFZqj5o1G0/TXkHP8hKcD+gAS8/QgN0P6N1vD65ACU/MnoqP2K4Cz908Bo/JCljPg=="),
+"format": 34359742487,
+"index_count": 420,
+"index_data": PackedByteArray("TQBOAA0ADQALAE0ADQBOAE8ATwAPAA0AUABOAE0ATwBOAFAATQBRAFAAUABSAE8ANABQAFEAUgBQADQAUQAMADQANAAOAFIANAAMABAADgA0ADUAEAA1ADQANQA2AA4AUwA1ABAANgA1AFMAEABUAFMAUwBVADYAOABTAFQAVQBTADgAOAA3AFUAVABWADgAEQA3ADgAOQA4AFYAOAA5ABEAVgASADkAVwARADkAOQASAFgAOQBZAFcAWABZADkAWgBXAFkAWQBYAFsAWQBcAFoAWwBcAFkAWgBcABQAFABcAFsAFAAVAFoAWwATABQAAgBdAF4AXgABAAIAXwBeAF0AYABdAAIAAgAFAGAAXQBgAGEAXQAyAF8AYQAyAF0AAABfADIAMgBhAAQAMgADAAAABAADADIAYgBjABgAGAAWAGIAZABjAGIAYgBlAGQAZABlABcAFwAZAGQAOgAZABcAGwAZADoAOgA7ABsAZgA7ADoAFwA8ADoAOgA9AGYAPQA6ADwAPABnAD0APQBnAD4APgA/AD0APwA+ABwAHAAaAD8AQAAaABwAHABoAEAAaQBAAGgAaABqAGkAaQBqAB4AHgAdAGkACABrAGwAbAAHAAgAbQBsAGsAbgBrAAgACAAKAG4AawBvAG0AbwBrAG4ABgBtAG8AbgBwAG8AbwAzAAYAMwBvAHAAcAAJADMAHwAgACEAIQBBAB8AHwBBAHEAcQByAB8AcgBxAEIAQgBxAEMAQgBzAHIAQwBEAEIAIgBzAEIAQgBEACMAQgB0ACIAIwB0AEIAdQB2AEcARwB2AEgASAAmAEcARwB3AHUASAB2AEYARgAlAEgAeABGAHYAdgB1AHgAdQB3AEkARQB4AHUASQB5AHUAdQB5AEUAegB5AEkARQB5AHoASQAnAHoAegAkAEUAewAtADAAMAB8AHsAewB8AH0ALQB7AH4AfgAxAC0AfgB7AEoAfQBKAHsASgBLAH4ALwBLAEoASgB/AC8AfwBKAH0AfQAuAH8AgACBACoAKgAoAIAALAAqAIEAgQCCACwATACBAIAAggCBAEwAgACDAEwATACDACkATACEAIIAKQCFAEwAhABMAIUAhQArAIQA"),
+"lods": [0.0111123435, PackedByteArray("AgAyAAEAAAABADIABQAyAAIAMgADAAAAMgAFAAQABAADADIABgAHAAgACAAzAAYAMwAIAAoACgAJADMACwAMAA0ANAANAAwANAAMABAADgANADQADQAOAA8ADgA0ADUAEAA1ADQANQA2AA4ANQA3ADYAOAA1ABAANwA1ADgAEAASADgAEQA3ADgAOQA4ABIAOAA5ABEAOQASABMAFQARADkAEwAUADkAOQAUABUAFgAXABgAFwAZABgAOgAZABcAGwAZADoAOgA7ABsAFwA8ADoAOgA9ADsAPQA6ADwAPQA8AD4APgA/AD0APwA+ABwAHAAaAD8AQAAaABwAHAAeAEAAHgAdAEAAHwAgACEAIQBBAB8AHwBBAEIAQgBBAEMAQgAiAB8AQwBEAEIAIwAiAEIAQgBEACMARQBGAEcARwBGAEgARgAlAEgASAAmAEcARwBJAEUAJABFAEkASQAnACQASgAtADAALgBKADAASgAuAC8ALwBLAEoALQBKAEsASwAxAC0AKABMACoALAAqAEwAKAApAEwATAArACwAKwBMACkA"), 0.04446024, PackedByteArray("AAABAAIAAgADAAAABAADAAIAAgAFAAQABgAHAAgACAAJAAYACQAIAAoACwAMAA0ADgANAAwADQAOAA8ADgAMABAAEAARAA4AEAASABEAEQASABMAEwAUABEAEQAUABUAFgAXABgAFwAZABgAGgAZABcAGQAaABsAGgAXABwAHQAaABwAHAAeAB0AHwAgACEAHwAhACIAIgAhACMAJAAlACYAJgAnACQAKAApACoAKwAqACkAKgArACwALQAuAC8ALgAtADAALwAxAC0A")],
+"material": SubResource("StandardMaterial3D_qi54s"),
+"name": "Rocks_W",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 134,
+"vertex_data": PackedByteArray("Loc7PfiUOjwSzRs9xNM8PZrvGDwfbSa7WNhKPbHUJLsfbSa7xVs3PZRSDzvaoDw9sawqPZJah7tMsCw9RZMuPT+vObwfbSa7eLIGPUEfhLt6/Rs98U3mPJd2N7wfbSa78e/UPJ98P7sfbSa7MZT3PN8oRTxbXQ49Q5PRPD/SITwfbSa7xNM8PZrvGDwfbSa7Loc7PfiUOjwSzRs93wcQPfYSRzwfbSa7MZT3PN8oRTxbXQ49Q5PRPD/SITwfbSa7zy/gPMA7OzxTFlM9V8IEvRpKRjxwgRs9D08wvU+aKzwFvz49z8c8vUwnGjy4JCa7fc4PvTKiSzwJUSW7Q5PRvD/SITwfbSa78U3mPJd2N7wfbSa7eLIGPUEfhLt6/Rs9RZMuPT+vObwfbSa7sawqPZJah7tMsCw9WIYqvcSKAbvPki89xVs3PZRSDzvaoDw9u5gKvY+Y0LidcCQ9v4gqvZJATbyLIxG78U3mvJd2N7wfbSa7zy/gPMA7OzxTFlM9Loc7PfiUOjwSzRs9xVs3PZRSDzvaoDw9D08wvU+aKzwFvz49WIYqvcSKAbvPki89u5gKvY+Y0LidcCQ9eLIGPUEfhLt6/Rs9MZT3PN8oRTxbXQ49V8IEvRpKRjxwgRs98U3mvJd2N7wfbSa7u5gKvY+Y0LidcCQ9T0vVvJ98P7sfbSa7V8IEvRpKRjxwgRs9Q5PRvD/SITwfbSa7aqlKvZdmDbuBNSW7D08wvU+aKzwFvz49WIYqvcSKAbvPki89z8c8vUwnGjy4JCa7v4gqvZJATbyLIxG7nZpHPRK69Drr9Zc8hAj8PG9IAjsvaRY9pD4ePVK6XTzzuw897DW+PBGWaDxfaUE9VqypPDY0QTwjzzA9MeyqvD29Tzwj6DI9AWbEvJ1CXjw/OEE9X3YkvbukUDzfbBw9pbvePH/Fwrs9RT89OMLePGbtLDploV89ALaoPN89G7scgDY9pBCAuJr+UbpG0FU938esvPgkCDq0VD097/XRvH3RGLobI1M9hKorveWX37uWs6U8OMLePGbtLDploV89AITmvOFdlTsONVw9pBCAuJr+UbpG0FU97/XRvH3RGLobI1M938esvPgkCDq0VD09ALaoPN89G7scgDY9VqypPDY0QTwjzzA9hAj8PG9IAjsvaRY9MeyqvD29Tzwj6DI9vMM/vao4/zpKe6I8hKorveWX37uWs6U8uIX0vGWlQzsqQKI8XFM0PdqI7zu6Sb47+pYRPd9wGzxyjLo76VHmPFJG/Ttfkb07WW8cPfiBRzxxw3U8fKQ7PYFWBjzCcp48pKr5PKT1DDxWRp48AIYPPJ0uYTyuYUE95K3Tuyg5UTxNml49pBCAuNo0UDyO6jY9JULgvCEWPDyINVM9d8b9vDSXBzzj/so8vMU3vQppHTxO9p08ii0avc8CLjwGvJw8l37kvKEMFTyqJMA7MdAyvTlrHDxohMI7hcIQvUyFLzzh3bw7DuE7PaefBLutGxM8XFM0PdqI7zu6Sb47fKQ7PYFWBjzCcp48Q0YpPSYNDrx6u9k7Jq4tPQ8y97uYRoo8zGT2PHZVDLxjjdk7Q0YpPSYNDrx6u9k7Jq4tPQ8y97uYRoo8XZQEPUC36LuTBKU8szgGPAr8Nzu7z2Y9pBCAuIVbO7oppjs9mvUDvbT6tbsmbqU8COIkvUmGw7uaI+Y7MmPuvN/K67v94+Q7OhDxPHb7DbsckM47zGT2PHZVDLxjjdk7XZQEPUC36LuTBKU86VHmPFJG/Ttfkb07xbL4POy5QbqvXqI8pKr5PKT1DDxWRp48szgGPAr8Nzu7z2Y95K3Tuyg5UTxNml49JULgvCEWPDyINVM9RbJAvXAUETsGuTc9LpELumdSjzsXxDg9dHqoPM6jXTsoSTE9pBCAuNo0UDyO6jY9pBCAuIVbO7oppjs9OG6svBI9mTtI7To9vG8GvZHVsjt9GyM938pFvZ+sajsMuMc7MdAyvTlrHDxohMI7vMU3vQppHTxO9p08COIkvUmGw7uaI+Y7RbJAvXAUETsGuTc9MmPuvN/K67v94+Q7lBHYvEiV/Dp6QdY7l37kvKEMFTyqJMA7mvUDvbT6tbsmbqU8d8b9vDSXBzzj/so8vG8GvZHVsjt9GyM9JLqesc8/XeexskW0fjvQ5A7UDHBklMb1Ur9TdAedavTdpKI7nMeG1W2hDDpoyyvUgUnQIxonbCPUUnxJ70meJIMoB3VxcScHQDLNznKqQCNpSA2q+7wqE7GyRbRdy2BhJLqesa/EW2RFgLTgpP8wQEAyzc70zlkeaUgNqnK0aSV+lMK1ouWqUZrGXNYtxbBUnFUtrkjBLyqGRua+DsGEItOBPe3I/Q9Bbr/NsBbA7mXUUnxJXMDmqoFJ0CNK2ueobaEMOpbda9fdpKI7G9fu1yZkBDn70g+0Ur9TdFvN1OsNujotKsvT1y1lb0Oa0/u05KfSSLnaXd1+lMK1m/1TriS6nrHH5w+VUr9TdEr8fuOcVS2uBb8ZyCZkBDlezJK4Dbo6Lei4cjGBSdAjWO2tYEAyzc6L8mEZmsZc1mi8zUnkp9JIGrT52Q26Oi1g0cndIeA8caaRePeaxlzWGFPB2G6/zbDQQzznuDQsa2pgEQ6cVS2uOcNNGiZkBDmHL+MthkbmvjXEgCAtZW9DGz7MKuvw/2wKkEP4kxHHSCBmrwu1jQTz8PKGRumBW/gA/hZBWC156rLm6yx90HjysefHRQ18Ofn2++89oW2I8NfvGzgvhBccNvsQw2WWP2pg64PTeTeqFFnfk645eBEsavTpurvBvgu+6m3GBnomL83zm71jWwIsJNZurWWWP2rC/2OyZmkDbVrlDcA5eBEs8e3nvQZ6Ji8Z6UnBu8G+Cy3pyj95N6oU1P0uUlgteeps/whRkxHHSFH2D2t90HjyMemLP/QRu29ybzwIY1sCLCIrQS225A55tojX+3G+frtTwIFh6H479Mz+Zz9lPsyq+K7RH9+WHPkK+OtDbc2CvDu1EWNdMnq0DbRXGc2Irv6X/sJAr3tQvKL3vT0ZMwP+Pf4TPhpv7bSO4Uw0esbutOW4MWVMQ9/DxsO1ISKDof+e/0xASrwStcnCzGOQTcDIWspNJrKExfDT+o9CMOIjaAeZfPNxvn675D+74W3NgrySSurjgaOvNETPvNOQqnEyt88V1u9O00b+vlOogaOvNBfbxNaQqnEyidT915BO7j3SxCWny4IMZz7/zb3FOmEIK/QSuFKxrkHszYne91uFOvLOd62AsOlIJNWO4ewhB3SecUwH707TRhlJ3CSQTu49Rj0iJmU+zKrUuAAV4hhkcBFvaAhdMnq0oLIDGsuCDGdv/+u9r3tQvMf3rcAab+20BeM1wUE2TXEMqvm5vQ3cBO//v0LaDV4e0f8UURkzA/5h/0E+xTphCNr7z0cU8IoUZOjkP6LwCEfkrOM6khBkgseCVgGQTcDIKcxQJUxD38Ntw+Ah91uFOmM12ypBNk1xZ2vYCoCw6UgiuCfckuXGeUKHG/xKvBK1uUCE5FKxrkHtvnzaesbutHtHQOWi8AhHrph69g==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d2ayk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujcmx"]
+metallic = 1.0
+roughness = 0.15
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_ujcmx")
+size = Vector3(3.9478302, 1.2949219, 24.407593)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_68gah"]
+data = PackedVector3Array(-1.9739, 0.6152, 12.203799, 1.9739, 0.6152, 12.203799, -1.9739, -0.6152, 12.203799, 1.9739, 0.6152, 12.203799, 1.9739, -0.6152, 12.203799, -1.9739, -0.6152, 12.203799, 1.9739, 0.6152, -12.203799, -1.9739, 0.6152, -12.203799, 1.9739, -0.6152, -12.203799, -1.9739, 0.6152, -12.203799, -1.9739, -0.6152, -12.203799, 1.9739, -0.6152, -12.203799, 1.9739, 0.6152, 12.203799, 1.9739, 0.6152, -12.203799, 1.9739, -0.6152, 12.203799, 1.9739, 0.6152, -12.203799, 1.9739, -0.6152, -12.203799, 1.9739, -0.6152, 12.203799, -1.9739, 0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, -0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, -0.6152, 12.203799, -1.9739, -0.6152, -12.203799, 1.9739, 0.6152, 12.203799, -1.9739, 0.6152, 12.203799, 1.9739, 0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, 0.6152, -12.203799, 1.9739, 0.6152, -12.203799, -1.9739, -0.6152, 12.203799, 1.9739, -0.6152, 12.203799, -1.9739, -0.6152, -12.203799, 1.9739, -0.6152, 12.203799, 1.9739, -0.6152, -12.203799, -1.9739, -0.6152, -12.203799)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ed42d"]
+data = PackedVector3Array(-1.9739, 0.6152, 12.203799, 1.9739, 0.6152, 12.203799, -1.9739, -0.6152, 12.203799, 1.9739, 0.6152, 12.203799, 1.9739, -0.6152, 12.203799, -1.9739, -0.6152, 12.203799, 1.9739, 0.6152, -12.203799, -1.9739, 0.6152, -12.203799, 1.9739, -0.6152, -12.203799, -1.9739, 0.6152, -12.203799, -1.9739, -0.6152, -12.203799, 1.9739, -0.6152, -12.203799, 1.9739, 0.6152, 12.203799, 1.9739, 0.6152, -12.203799, 1.9739, -0.6152, 12.203799, 1.9739, 0.6152, -12.203799, 1.9739, -0.6152, -12.203799, 1.9739, -0.6152, 12.203799, -1.9739, 0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, -0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, -0.6152, 12.203799, -1.9739, -0.6152, -12.203799, 1.9739, 0.6152, 12.203799, -1.9739, 0.6152, 12.203799, 1.9739, 0.6152, -12.203799, -1.9739, 0.6152, 12.203799, -1.9739, 0.6152, -12.203799, 1.9739, 0.6152, -12.203799, -1.9739, -0.6152, 12.203799, 1.9739, -0.6152, 12.203799, -1.9739, -0.6152, -12.203799, 1.9739, -0.6152, 12.203799, 1.9739, -0.6152, -12.203799, -1.9739, -0.6152, -12.203799)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_57qmd"]
+panorama = ExtResource("14_ed42d")
+
+[sub_resource type="Sky" id="Sky_yf5fn"]
+sky_material = SubResource("PanoramaSkyMaterial_57qmd")
+
+[sub_resource type="Environment" id="Environment_g4v7s"]
+background_mode = 2
+sky = SubResource("Sky_yf5fn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_57qmd"]
+size = Vector3(1.5350342, 1, 1)
+
+[node name="Ato3" type="Node3D" unique_id=42682506]
+
+[node name="Labiritinto de Folhas" type="Node3D" parent="." unique_id=1770542640]
+transform = Transform3D(1, 0, 0, 0, 1.1439999, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Paredes" type="Node3D" parent="Labiritinto de Folhas" unique_id=473924317]
+
+[node name="Root Scene" parent="Labiritinto de Folhas/Paredes" unique_id=998889708 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007841468, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47768" parent="Labiritinto de Folhas/Paredes" unique_id=1543263994 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136726, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47769" parent="Labiritinto de Folhas/Paredes" unique_id=1933064263 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47770" parent="Labiritinto de Folhas/Paredes" unique_id=1250128231 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47771" parent="Labiritinto de Folhas/Paredes" unique_id=261184571 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47772" parent="Labiritinto de Folhas/Paredes" unique_id=1332382759 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47773" parent="Labiritinto de Folhas/Paredes" unique_id=1458571620 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47774" parent="Labiritinto de Folhas/Paredes" unique_id=995074854 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47775" parent="Labiritinto de Folhas/Paredes" unique_id=99951883 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47776" parent="Labiritinto de Folhas/Paredes" unique_id=640503585 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47777" parent="Labiritinto de Folhas/Paredes" unique_id=189958956 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(0.99999994, 0, 0, 0, 2.1631992, 0, 0, 0, 0.99999994, 12.207299, 0.17367376, -3.5762784e-07)
+
+[node name="@Node3D@47781" parent="Labiritinto de Folhas/Paredes" unique_id=1220162227 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(0.99999994, 0, 0, 0, 2.0598855, 0, 0, 0, 0.99999994, 17.093353, 0.17367376, -3.5762784e-07)
+
+[node name="@Node3D@47782" parent="Labiritinto de Folhas/Paredes" unique_id=933213279 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47783" parent="Labiritinto de Folhas/Paredes" unique_id=496500011 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47784" parent="Labiritinto de Folhas/Paredes" unique_id=1392909168 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47785" parent="Labiritinto de Folhas/Paredes" unique_id=771335881 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47786" parent="Labiritinto de Folhas/Paredes" unique_id=1354143565 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47787" parent="Labiritinto de Folhas/Paredes" unique_id=1605534559 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47788" parent="Labiritinto de Folhas/Paredes" unique_id=700870689 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47789" parent="Labiritinto de Folhas/Paredes" unique_id=602673053 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47790" parent="Labiritinto de Folhas/Paredes" unique_id=1282863774 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47791" parent="Labiritinto de Folhas/Paredes" unique_id=33785381 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47792" parent="Labiritinto de Folhas/Paredes" unique_id=883170880 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47793" parent="Labiritinto de Folhas/Paredes" unique_id=1214012856 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47794" parent="Labiritinto de Folhas/Paredes" unique_id=1664365456 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47795" parent="Labiritinto de Folhas/Paredes" unique_id=882285962 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47796" parent="Labiritinto de Folhas/Paredes" unique_id=902389586 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.416065, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47797" parent="Labiritinto de Folhas/Paredes" unique_id=551430462 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.63758, 0.17367378, -3.5762787e-07)
+
+[node name="@Node3D@47798" parent="Labiritinto de Folhas/Paredes" unique_id=82206650 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47799" parent="Labiritinto de Folhas/Paredes" unique_id=604444844 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47800" parent="Labiritinto de Folhas/Paredes" unique_id=114833768 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.772113, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47801" parent="Labiritinto de Folhas/Paredes" unique_id=2130325347 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47802" parent="Labiritinto de Folhas/Paredes" unique_id=2022552207 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47803" parent="Labiritinto de Folhas/Paredes" unique_id=1899612917 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 1.2293556)
+
+[node name="@Node3D@47804" parent="Labiritinto de Folhas/Paredes" unique_id=117989919 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47805" parent="Labiritinto de Folhas/Paredes" unique_id=1210326209 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47806" parent="Labiritinto de Folhas/Paredes" unique_id=1205215357 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47807" parent="Labiritinto de Folhas/Paredes" unique_id=525436008 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 2.443028)
+
+[node name="@Node3D@47808" parent="Labiritinto de Folhas/Paredes" unique_id=2115823479 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 2.443028)
+
+[node name="@Node3D@47809" parent="Labiritinto de Folhas/Paredes" unique_id=1627383176 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 2.443028)
+
+[node name="@Node3D@47810" parent="Labiritinto de Folhas/Paredes" unique_id=915622081 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47811" parent="Labiritinto de Folhas/Paredes" unique_id=1338643710 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 2.443028)
+
+[node name="@Node3D@47812" parent="Labiritinto de Folhas/Paredes" unique_id=1489002547 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 2.443028)
+
+[node name="@Node3D@47813" parent="Labiritinto de Folhas/Paredes" unique_id=1848094267 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 2.443028)
+
+[node name="@Node3D@47814" parent="Labiritinto de Folhas/Paredes" unique_id=1526551978 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47815" parent="Labiritinto de Folhas/Paredes" unique_id=2078940406 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 2.443028)
+
+[node name="@Node3D@47816" parent="Labiritinto de Folhas/Paredes" unique_id=150495251 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 2.443028)
+
+[node name="@Node3D@47817" parent="Labiritinto de Folhas/Paredes" unique_id=1830837633 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 2.443028)
+
+[node name="@Node3D@47818" parent="Labiritinto de Folhas/Paredes" unique_id=2005486739 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 2.443028)
+
+[node name="@Node3D@47819" parent="Labiritinto de Folhas/Paredes" unique_id=229481052 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 2.443028)
+
+[node name="@Node3D@47820" parent="Labiritinto de Folhas/Paredes" unique_id=246949141 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 2.443028)
+
+[node name="@Node3D@47821" parent="Labiritinto de Folhas/Paredes" unique_id=1997219777 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 2.443028)
+
+[node name="@Node3D@47822" parent="Labiritinto de Folhas/Paredes" unique_id=1744141517 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 2.443028)
+
+[node name="@Node3D@47823" parent="Labiritinto de Folhas/Paredes" unique_id=1250389800 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 2.443028)
+
+[node name="@Node3D@47824" parent="Labiritinto de Folhas/Paredes" unique_id=1136128776 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 2.443028)
+
+[node name="@Node3D@47825" parent="Labiritinto de Folhas/Paredes" unique_id=208872723 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 2.4508696)
+
+[node name="@Node3D@47826" parent="Labiritinto de Folhas/Paredes" unique_id=1646341327 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47827" parent="Labiritinto de Folhas/Paredes" unique_id=781922517 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47828" parent="Labiritinto de Folhas/Paredes" unique_id=1371652111 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47829" parent="Labiritinto de Folhas/Paredes" unique_id=1023924399 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47830" parent="Labiritinto de Folhas/Paredes" unique_id=2077016315 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47831" parent="Labiritinto de Folhas/Paredes" unique_id=1475596771 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47832" parent="Labiritinto de Folhas/Paredes" unique_id=292863890 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47833" parent="Labiritinto de Folhas/Paredes" unique_id=394793490 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47834" parent="Labiritinto de Folhas/Paredes" unique_id=1403128757 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47835" parent="Labiritinto de Folhas/Paredes" unique_id=942282613 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 3.6723838)
+
+[node name="@Node3D@47836" parent="Labiritinto de Folhas/Paredes" unique_id=685610973 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 4.893898)
+
+[node name="@Node3D@47837" parent="Labiritinto de Folhas/Paredes" unique_id=205880829 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 4.893898)
+
+[node name="@Node3D@47838" parent="Labiritinto de Folhas/Paredes" unique_id=418216985 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 4.893898)
+
+[node name="@Node3D@47839" parent="Labiritinto de Folhas/Paredes" unique_id=1055901678 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 4.893898)
+
+[node name="@Node3D@47840" parent="Labiritinto de Folhas/Paredes" unique_id=1006497744 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 4.886056)
+
+[node name="@Node3D@47841" parent="Labiritinto de Folhas/Paredes" unique_id=1285903511 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 4.886056)
+
+[node name="@Node3D@47842" parent="Labiritinto de Folhas/Paredes" unique_id=897595864 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 4.886056)
+
+[node name="@Node3D@47843" parent="Labiritinto de Folhas/Paredes" unique_id=1173421794 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 4.893898)
+
+[node name="@Node3D@47844" parent="Labiritinto de Folhas/Paredes" unique_id=662836419 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 4.886056)
+
+[node name="@Node3D@47845" parent="Labiritinto de Folhas/Paredes" unique_id=1730488824 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 4.886056)
+
+[node name="@Node3D@47846" parent="Labiritinto de Folhas/Paredes" unique_id=1641699309 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 4.886056)
+
+[node name="@Node3D@47847" parent="Labiritinto de Folhas/Paredes" unique_id=2108402573 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 4.886056)
+
+[node name="@Node3D@47848" parent="Labiritinto de Folhas/Paredes" unique_id=1214237068 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 4.886056)
+
+[node name="@Node3D@47849" parent="Labiritinto de Folhas/Paredes" unique_id=1900270657 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 4.886056)
+
+[node name="@Node3D@47850" parent="Labiritinto de Folhas/Paredes" unique_id=1830690451 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 4.886056)
+
+[node name="@Node3D@47851" parent="Labiritinto de Folhas/Paredes" unique_id=1959388436 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 4.886056)
+
+[node name="@Node3D@47852" parent="Labiritinto de Folhas/Paredes" unique_id=1957369186 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 4.886056)
+
+[node name="@Node3D@47853" parent="Labiritinto de Folhas/Paredes" unique_id=3825215 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 4.886056)
+
+[node name="@Node3D@47854" parent="Labiritinto de Folhas/Paredes" unique_id=538830270 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 4.893898)
+
+[node name="@Node3D@47855" parent="Labiritinto de Folhas/Paredes" unique_id=650015179 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 4.893898)
+
+[node name="@Node3D@47856" parent="Labiritinto de Folhas/Paredes" unique_id=1911945084 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 4.893898)
+
+[node name="@Node3D@47857" parent="Labiritinto de Folhas/Paredes" unique_id=2107203276 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 6.115412)
+
+[node name="@Node3D@47858" parent="Labiritinto de Folhas/Paredes" unique_id=336161684 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 6.115412)
+
+[node name="@Node3D@47859" parent="Labiritinto de Folhas/Paredes" unique_id=2045719698 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 6.115412)
+
+[node name="@Node3D@47860" parent="Labiritinto de Folhas/Paredes" unique_id=1366994916 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 6.115412)
+
+[node name="@Node3D@47861" parent="Labiritinto de Folhas/Paredes" unique_id=7384280 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 6.115412)
+
+[node name="@Node3D@47862" parent="Labiritinto de Folhas/Paredes" unique_id=1581669706 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 6.115412)
+
+[node name="@Node3D@47863" parent="Labiritinto de Folhas/Paredes" unique_id=245511627 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 6.115412)
+
+[node name="@Node3D@47864" parent="Labiritinto de Folhas/Paredes" unique_id=1194003079 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 6.115412)
+
+[node name="@Node3D@47865" parent="Labiritinto de Folhas/Paredes" unique_id=138392225 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 6.115412)
+
+[node name="@Node3D@47866" parent="Labiritinto de Folhas/Paredes" unique_id=1754319102 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 6.115412)
+
+[node name="@Node3D@47867" parent="Labiritinto de Folhas/Paredes" unique_id=799838438 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 6.115412)
+
+[node name="@Node3D@47868" parent="Labiritinto de Folhas/Paredes" unique_id=1011713779 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 7.336926)
+
+[node name="@Node3D@47869" parent="Labiritinto de Folhas/Paredes" unique_id=1686281370 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 7.329084)
+
+[node name="@Node3D@47870" parent="Labiritinto de Folhas/Paredes" unique_id=1377058626 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 7.329084)
+
+[node name="@Node3D@47871" parent="Labiritinto de Folhas/Paredes" unique_id=178177245 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 7.329084)
+
+[node name="@Node3D@47872" parent="Labiritinto de Folhas/Paredes" unique_id=1133662001 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 7.329084)
+
+[node name="@Node3D@47873" parent="Labiritinto de Folhas/Paredes" unique_id=1538884458 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 7.329084)
+
+[node name="@Node3D@47874" parent="Labiritinto de Folhas/Paredes" unique_id=1550486216 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 7.329084)
+
+[node name="@Node3D@47875" parent="Labiritinto de Folhas/Paredes" unique_id=812013444 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 7.336926)
+
+[node name="@Node3D@47876" parent="Labiritinto de Folhas/Paredes" unique_id=763954720 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 7.329084)
+
+[node name="@Node3D@47877" parent="Labiritinto de Folhas/Paredes" unique_id=232183581 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 7.329084)
+
+[node name="@Node3D@47878" parent="Labiritinto de Folhas/Paredes" unique_id=258236655 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 7.329084)
+
+[node name="@Node3D@47879" parent="Labiritinto de Folhas/Paredes" unique_id=923938014 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 7.336926)
+
+[node name="@Node3D@47880" parent="Labiritinto de Folhas/Paredes" unique_id=998781751 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 7.336926)
+
+[node name="@Node3D@47881" parent="Labiritinto de Folhas/Paredes" unique_id=1844109574 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 7.329084)
+
+[node name="@Node3D@47882" parent="Labiritinto de Folhas/Paredes" unique_id=453224044 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 7.329084)
+
+[node name="@Node3D@47883" parent="Labiritinto de Folhas/Paredes" unique_id=1071127733 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 7.329084)
+
+[node name="@Node3D@47884" parent="Labiritinto de Folhas/Paredes" unique_id=1001730503 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 7.329084)
+
+[node name="@Node3D@47885" parent="Labiritinto de Folhas/Paredes" unique_id=1115379400 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 7.329084)
+
+[node name="@Node3D@47886" parent="Labiritinto de Folhas/Paredes" unique_id=893263382 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 7.329084)
+
+[node name="@Node3D@47887" parent="Labiritinto de Folhas/Paredes" unique_id=798857920 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 7.336926)
+
+[node name="@Node3D@47888" parent="Labiritinto de Folhas/Paredes" unique_id=1635578524 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 7.336926)
+
+[node name="@Node3D@47889" parent="Labiritinto de Folhas/Paredes" unique_id=1078180487 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 8.558439)
+
+[node name="@Node3D@47890" parent="Labiritinto de Folhas/Paredes" unique_id=384815640 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 8.558439)
+
+[node name="@Node3D@47891" parent="Labiritinto de Folhas/Paredes" unique_id=665875224 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.772113, 0.17367378, 8.558439)
+
+[node name="@Node3D@47892" parent="Labiritinto de Folhas/Paredes" unique_id=251369805 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 8.558439)
+
+[node name="@Node3D@47893" parent="Labiritinto de Folhas/Paredes" unique_id=175400921 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 8.558439)
+
+[node name="@Node3D@47894" parent="Labiritinto de Folhas/Paredes" unique_id=1575706552 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 8.558439)
+
+[node name="@Node3D@47895" parent="Labiritinto de Folhas/Paredes" unique_id=445534804 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 8.558439)
+
+[node name="@Node3D@47896" parent="Labiritinto de Folhas/Paredes" unique_id=1700009681 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 8.558439)
+
+[node name="@Node3D@47897" parent="Labiritinto de Folhas/Paredes" unique_id=1902174441 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 8.558439)
+
+[node name="@Node3D@47898" parent="Labiritinto de Folhas/Paredes" unique_id=2041619540 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 8.558439)
+
+[node name="@Node3D@47899" parent="Labiritinto de Folhas/Paredes" unique_id=1973878061 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 8.558439)
+
+[node name="@Node3D@47900" parent="Labiritinto de Folhas/Paredes" unique_id=1226850009 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007841468, 0.17367378, 9.772113)
+
+[node name="@Node3D@47901" parent="Labiritinto de Folhas/Paredes" unique_id=2102322010 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136726, 0.17367378, 9.772113)
+
+[node name="@Node3D@47902" parent="Labiritinto de Folhas/Paredes" unique_id=1701519090 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 9.772113)
+
+[node name="@Node3D@47903" parent="Labiritinto de Folhas/Paredes" unique_id=579216698 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 9.779954)
+
+[node name="@Node3D@47904" parent="Labiritinto de Folhas/Paredes" unique_id=1583028756 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 9.779954)
+
+[node name="@Node3D@47905" parent="Labiritinto de Folhas/Paredes" unique_id=1007146677 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.772113, 0.17367378, 9.779954)
+
+[node name="@Node3D@47906" parent="Labiritinto de Folhas/Paredes" unique_id=264964235 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 9.772113)
+
+[node name="@Node3D@47907" parent="Labiritinto de Folhas/Paredes" unique_id=1672549515 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 9.772113)
+
+[node name="@Node3D@47908" parent="Labiritinto de Folhas/Paredes" unique_id=1487240072 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 9.772113)
+
+[node name="@Node3D@47909" parent="Labiritinto de Folhas/Paredes" unique_id=1105553922 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 9.772113)
+
+[node name="@Node3D@47910" parent="Labiritinto de Folhas/Paredes" unique_id=1967225676 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 9.772113)
+
+[node name="@Node3D@47911" parent="Labiritinto de Folhas/Paredes" unique_id=1286880192 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 9.772113)
+
+[node name="@Node3D@47912" parent="Labiritinto de Folhas/Paredes" unique_id=1233012538 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 9.772113)
+
+[node name="@Node3D@47913" parent="Labiritinto de Folhas/Paredes" unique_id=827540852 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 9.772113)
+
+[node name="@Node3D@47914" parent="Labiritinto de Folhas/Paredes" unique_id=801164773 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 9.772113)
+
+[node name="@Node3D@47915" parent="Labiritinto de Folhas/Paredes" unique_id=1987844083 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 9.779954)
+
+[node name="@Node3D@47916" parent="Labiritinto de Folhas/Paredes" unique_id=979751652 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 9.772113)
+
+[node name="@Node3D@47917" parent="Labiritinto de Folhas/Paredes" unique_id=971298149 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 9.772113)
+
+[node name="@Node3D@47918" parent="Labiritinto de Folhas/Paredes" unique_id=1746701474 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 9.772113)
+
+[node name="@Node3D@47919" parent="Labiritinto de Folhas/Paredes" unique_id=1409668245 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 9.779954)
+
+[node name="@Node3D@47920" parent="Labiritinto de Folhas/Paredes" unique_id=1388606120 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 9.779954)
+
+[node name="@Node3D@47921" parent="Labiritinto de Folhas/Paredes" unique_id=1919445250 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 11.001468)
+
+[node name="@Node3D@47922" parent="Labiritinto de Folhas/Paredes" unique_id=1914068752 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 11.001468)
+
+[node name="@Node3D@47923" parent="Labiritinto de Folhas/Paredes" unique_id=122151162 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 11.001468)
+
+[node name="@Node3D@47924" parent="Labiritinto de Folhas/Paredes" unique_id=1477547103 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.772113, 0.17367378, 11.001468)
+
+[node name="@Node3D@47925" parent="Labiritinto de Folhas/Paredes" unique_id=819626587 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 11.001468)
+
+[node name="@Node3D@47926" parent="Labiritinto de Folhas/Paredes" unique_id=1154899201 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 11.001468)
+
+[node name="@Node3D@47927" parent="Labiritinto de Folhas/Paredes" unique_id=1149865384 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 11.001468)
+
+[node name="@Node3D@47928" parent="Labiritinto de Folhas/Paredes" unique_id=1383255980 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 11.001468)
+
+[node name="@Node3D@47929" parent="Labiritinto de Folhas/Paredes" unique_id=775353119 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 11.001468)
+
+[node name="@Node3D@47930" parent="Labiritinto de Folhas/Paredes" unique_id=1845926807 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 11.001468)
+
+[node name="@Node3D@47931" parent="Labiritinto de Folhas/Paredes" unique_id=1581433265 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 12.222982)
+
+[node name="@Node3D@47932" parent="Labiritinto de Folhas/Paredes" unique_id=2056498233 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 12.215141)
+
+[node name="@Node3D@47933" parent="Labiritinto de Folhas/Paredes" unique_id=145348358 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 12.215141)
+
+[node name="@Node3D@47934" parent="Labiritinto de Folhas/Paredes" unique_id=285570355 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 12.215141)
+
+[node name="@Node3D@47935" parent="Labiritinto de Folhas/Paredes" unique_id=696054503 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 12.222982)
+
+[node name="@Node3D@47936" parent="Labiritinto de Folhas/Paredes" unique_id=2083052179 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 12.215141)
+
+[node name="@Node3D@47937" parent="Labiritinto de Folhas/Paredes" unique_id=582739740 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 12.215141)
+
+[node name="@Node3D@47938" parent="Labiritinto de Folhas/Paredes" unique_id=1804622858 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 12.215141)
+
+[node name="@Node3D@47939" parent="Labiritinto de Folhas/Paredes" unique_id=609277570 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 12.215141)
+
+[node name="@Node3D@47940" parent="Labiritinto de Folhas/Paredes" unique_id=166532587 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 12.215141)
+
+[node name="@Node3D@47941" parent="Labiritinto de Folhas/Paredes" unique_id=68885785 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 12.215141)
+
+[node name="@Node3D@47942" parent="Labiritinto de Folhas/Paredes" unique_id=1758126385 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 12.215141)
+
+[node name="@Node3D@47943" parent="Labiritinto de Folhas/Paredes" unique_id=1606658405 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 12.215141)
+
+[node name="@Node3D@47944" parent="Labiritinto de Folhas/Paredes" unique_id=815261361 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 12.215141)
+
+[node name="@Node3D@47945" parent="Labiritinto de Folhas/Paredes" unique_id=619433201 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 12.215141)
+
+[node name="@Node3D@47946" parent="Labiritinto de Folhas/Paredes" unique_id=604324732 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 12.215141)
+
+[node name="@Node3D@47947" parent="Labiritinto de Folhas/Paredes" unique_id=1753894238 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 12.215141)
+
+[node name="@Node3D@47948" parent="Labiritinto de Folhas/Paredes" unique_id=1857621217 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 12.215141)
+
+[node name="@Node3D@47949" parent="Labiritinto de Folhas/Paredes" unique_id=228514817 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 12.215141)
+
+[node name="@Node3D@47950" parent="Labiritinto de Folhas/Paredes" unique_id=1936794266 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 12.215141)
+
+[node name="@Node3D@47951" parent="Labiritinto de Folhas/Paredes" unique_id=528172376 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 12.222982)
+
+[node name="@Node3D@47952" parent="Labiritinto de Folhas/Paredes" unique_id=436761822 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 12.222982)
+
+[node name="@Node3D@47953" parent="Labiritinto de Folhas/Paredes" unique_id=1362349081 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 12.222982)
+
+[node name="@Node3D@47954" parent="Labiritinto de Folhas/Paredes" unique_id=926275476 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 13.444496)
+
+[node name="@Node3D@47955" parent="Labiritinto de Folhas/Paredes" unique_id=1395215355 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 13.444496)
+
+[node name="@Node3D@47956" parent="Labiritinto de Folhas/Paredes" unique_id=1533678185 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 13.444496)
+
+[node name="@Node3D@47957" parent="Labiritinto de Folhas/Paredes" unique_id=2034102531 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 13.444496)
+
+[node name="@Node3D@47958" parent="Labiritinto de Folhas/Paredes" unique_id=1965473316 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 13.444496)
+
+[node name="@Node3D@47959" parent="Labiritinto de Folhas/Paredes" unique_id=2052949 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 13.444496)
+
+[node name="@Node3D@47960" parent="Labiritinto de Folhas/Paredes" unique_id=459682005 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 13.444496)
+
+[node name="@Node3D@47961" parent="Labiritinto de Folhas/Paredes" unique_id=1452261532 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 13.444496)
+
+[node name="@Node3D@47962" parent="Labiritinto de Folhas/Paredes" unique_id=2141932850 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 13.444496)
+
+[node name="@Node3D@47963" parent="Labiritinto de Folhas/Paredes" unique_id=1322121232 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 14.66601)
+
+[node name="@Node3D@47964" parent="Labiritinto de Folhas/Paredes" unique_id=2053175374 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 14.66601)
+
+[node name="@Node3D@47965" parent="Labiritinto de Folhas/Paredes" unique_id=259942893 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 14.658169)
+
+[node name="@Node3D@47966" parent="Labiritinto de Folhas/Paredes" unique_id=961025966 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 14.658169)
+
+[node name="@Node3D@47967" parent="Labiritinto de Folhas/Paredes" unique_id=343986194 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 14.658169)
+
+[node name="@Node3D@47968" parent="Labiritinto de Folhas/Paredes" unique_id=360511063 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 14.658169)
+
+[node name="@Node3D@47969" parent="Labiritinto de Folhas/Paredes" unique_id=1878874892 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 14.658169)
+
+[node name="@Node3D@47970" parent="Labiritinto de Folhas/Paredes" unique_id=1381040982 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 14.658169)
+
+[node name="@Node3D@47971" parent="Labiritinto de Folhas/Paredes" unique_id=1992864713 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 14.658169)
+
+[node name="@Node3D@47972" parent="Labiritinto de Folhas/Paredes" unique_id=11150252 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 14.658169)
+
+[node name="@Node3D@47973" parent="Labiritinto de Folhas/Paredes" unique_id=969170647 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 14.66601)
+
+[node name="@Node3D@47974" parent="Labiritinto de Folhas/Paredes" unique_id=107192024 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 14.658169)
+
+[node name="@Node3D@47975" parent="Labiritinto de Folhas/Paredes" unique_id=2035143542 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 14.658169)
+
+[node name="@Node3D@47976" parent="Labiritinto de Folhas/Paredes" unique_id=1393382847 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 14.658169)
+
+[node name="@Node3D@47977" parent="Labiritinto de Folhas/Paredes" unique_id=2008208261 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 14.658169)
+
+[node name="@Node3D@47978" parent="Labiritinto de Folhas/Paredes" unique_id=1248068319 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 14.658169)
+
+[node name="@Node3D@47979" parent="Labiritinto de Folhas/Paredes" unique_id=1468629188 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 14.658169)
+
+[node name="@Node3D@47980" parent="Labiritinto de Folhas/Paredes" unique_id=1337311695 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 14.658169)
+
+[node name="@Node3D@47981" parent="Labiritinto de Folhas/Paredes" unique_id=1404719029 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 14.658169)
+
+[node name="@Node3D@47982" parent="Labiritinto de Folhas/Paredes" unique_id=1975455705 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 14.658169)
+
+[node name="@Node3D@47983" parent="Labiritinto de Folhas/Paredes" unique_id=1114331195 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 14.658169)
+
+[node name="@Node3D@47984" parent="Labiritinto de Folhas/Paredes" unique_id=1828625679 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 14.658169)
+
+[node name="@Node3D@47985" parent="Labiritinto de Folhas/Paredes" unique_id=598085455 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 14.658169)
+
+[node name="@Node3D@47986" parent="Labiritinto de Folhas/Paredes" unique_id=2061430544 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 14.66601)
+
+[node name="@Node3D@47987" parent="Labiritinto de Folhas/Paredes" unique_id=1739117404 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 15.887525)
+
+[node name="@Node3D@47988" parent="Labiritinto de Folhas/Paredes" unique_id=1933532320 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 15.887525)
+
+[node name="@Node3D@47989" parent="Labiritinto de Folhas/Paredes" unique_id=435597434 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 15.887525)
+
+[node name="@Node3D@47990" parent="Labiritinto de Folhas/Paredes" unique_id=993706611 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 15.887525)
+
+[node name="@Node3D@47991" parent="Labiritinto de Folhas/Paredes" unique_id=1724923579 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 15.887525)
+
+[node name="@Node3D@47992" parent="Labiritinto de Folhas/Paredes" unique_id=2141728900 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 15.887525)
+
+[node name="@Node3D@47993" parent="Labiritinto de Folhas/Paredes" unique_id=1972380075 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 15.887525)
+
+[node name="@Node3D@47994" parent="Labiritinto de Folhas/Paredes" unique_id=814837155 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 15.887525)
+
+[node name="@Node3D@47995" parent="Labiritinto de Folhas/Paredes" unique_id=805638155 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 17.109037)
+
+[node name="@Node3D@47996" parent="Labiritinto de Folhas/Paredes" unique_id=1768991422 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 17.109037)
+
+[node name="@Node3D@47997" parent="Labiritinto de Folhas/Paredes" unique_id=1724811310 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 17.109037)
+
+[node name="@Node3D@47998" parent="Labiritinto de Folhas/Paredes" unique_id=1656850099 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 17.101196)
+
+[node name="@Node3D@47999" parent="Labiritinto de Folhas/Paredes" unique_id=2134246809 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 17.101196)
+
+[node name="@Node3D@48000" parent="Labiritinto de Folhas/Paredes" unique_id=303016437 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 17.101196)
+
+[node name="@Node3D@48001" parent="Labiritinto de Folhas/Paredes" unique_id=1092217244 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 17.101196)
+
+[node name="@Node3D@48002" parent="Labiritinto de Folhas/Paredes" unique_id=386564899 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 17.101196)
+
+[node name="@Node3D@48003" parent="Labiritinto de Folhas/Paredes" unique_id=922566485 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 17.101196)
+
+[node name="@Node3D@48004" parent="Labiritinto de Folhas/Paredes" unique_id=589781366 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 17.101196)
+
+[node name="@Node3D@48005" parent="Labiritinto de Folhas/Paredes" unique_id=655920675 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 17.101196)
+
+[node name="@Node3D@48006" parent="Labiritinto de Folhas/Paredes" unique_id=588618385 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 17.101196)
+
+[node name="@Node3D@48007" parent="Labiritinto de Folhas/Paredes" unique_id=275080118 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 17.101196)
+
+[node name="@Node3D@48008" parent="Labiritinto de Folhas/Paredes" unique_id=1560074261 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 17.101196)
+
+[node name="@Node3D@48009" parent="Labiritinto de Folhas/Paredes" unique_id=2009294418 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 17.101196)
+
+[node name="@Node3D@48010" parent="Labiritinto de Folhas/Paredes" unique_id=114487310 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 17.101196)
+
+[node name="@Node3D@48011" parent="Labiritinto de Folhas/Paredes" unique_id=2039427934 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 17.101196)
+
+[node name="@Node3D@48012" parent="Labiritinto de Folhas/Paredes" unique_id=955089320 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 17.101196)
+
+[node name="@Node3D@48013" parent="Labiritinto de Folhas/Paredes" unique_id=1718666336 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 17.101196)
+
+[node name="@Node3D@48014" parent="Labiritinto de Folhas/Paredes" unique_id=91971110 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 17.101196)
+
+[node name="@Node3D@48015" parent="Labiritinto de Folhas/Paredes" unique_id=342922658 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 17.101196)
+
+[node name="@Node3D@48016" parent="Labiritinto de Folhas/Paredes" unique_id=882331532 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 17.101196)
+
+[node name="@Node3D@48017" parent="Labiritinto de Folhas/Paredes" unique_id=1927551030 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 17.101196)
+
+[node name="@Node3D@48018" parent="Labiritinto de Folhas/Paredes" unique_id=308499123 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 17.109037)
+
+[node name="@Node3D@48019" parent="Labiritinto de Folhas/Paredes" unique_id=917400869 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 18.330553)
+
+[node name="@Node3D@48020" parent="Labiritinto de Folhas/Paredes" unique_id=1554122469 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 18.330553)
+
+[node name="@Node3D@48021" parent="Labiritinto de Folhas/Paredes" unique_id=516552745 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 18.330553)
+
+[node name="@Node3D@48022" parent="Labiritinto de Folhas/Paredes" unique_id=2045803040 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 18.330553)
+
+[node name="@Node3D@48023" parent="Labiritinto de Folhas/Paredes" unique_id=1148887967 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 18.330553)
+
+[node name="@Node3D@48024" parent="Labiritinto de Folhas/Paredes" unique_id=1596400194 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 18.330553)
+
+[node name="@Node3D@48025" parent="Labiritinto de Folhas/Paredes" unique_id=1200114837 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 18.330553)
+
+[node name="@Node3D@48026" parent="Labiritinto de Folhas/Paredes" unique_id=923825963 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 18.330553)
+
+[node name="@Node3D@48027" parent="Labiritinto de Folhas/Paredes" unique_id=952853176 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 18.330553)
+
+[node name="@Node3D@48028" parent="Labiritinto de Folhas/Paredes" unique_id=328051683 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 19.552067)
+
+[node name="@Node3D@48029" parent="Labiritinto de Folhas/Paredes" unique_id=1123464618 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 19.544226)
+
+[node name="@Node3D@48030" parent="Labiritinto de Folhas/Paredes" unique_id=1913852359 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 19.544226)
+
+[node name="@Node3D@48031" parent="Labiritinto de Folhas/Paredes" unique_id=1516692812 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 19.544226)
+
+[node name="@Node3D@48032" parent="Labiritinto de Folhas/Paredes" unique_id=1603998240 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 19.544226)
+
+[node name="@Node3D@48033" parent="Labiritinto de Folhas/Paredes" unique_id=2000334604 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 19.544226)
+
+[node name="@Node3D@48034" parent="Labiritinto de Folhas/Paredes" unique_id=286183747 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 19.544226)
+
+[node name="@Node3D@48035" parent="Labiritinto de Folhas/Paredes" unique_id=1320552589 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 19.544226)
+
+[node name="@Node3D@48036" parent="Labiritinto de Folhas/Paredes" unique_id=1421593999 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 19.544226)
+
+[node name="@Node3D@48037" parent="Labiritinto de Folhas/Paredes" unique_id=223759591 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 19.544226)
+
+[node name="@Node3D@48038" parent="Labiritinto de Folhas/Paredes" unique_id=1517403499 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 19.544226)
+
+[node name="@Node3D@48039" parent="Labiritinto de Folhas/Paredes" unique_id=133391986 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 19.552067)
+
+[node name="@Node3D@48040" parent="Labiritinto de Folhas/Paredes" unique_id=40535037 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 19.544226)
+
+[node name="@Node3D@48041" parent="Labiritinto de Folhas/Paredes" unique_id=709588670 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 19.544226)
+
+[node name="@Node3D@48042" parent="Labiritinto de Folhas/Paredes" unique_id=681621605 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 19.544226)
+
+[node name="@Node3D@48043" parent="Labiritinto de Folhas/Paredes" unique_id=964728947 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 19.552067)
+
+[node name="@Node3D@48044" parent="Labiritinto de Folhas/Paredes" unique_id=1789097467 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 19.552067)
+
+[node name="@Node3D@48045" parent="Labiritinto de Folhas/Paredes" unique_id=614998764 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 19.544226)
+
+[node name="@Node3D@48046" parent="Labiritinto de Folhas/Paredes" unique_id=82126718 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 19.544226)
+
+[node name="@Node3D@48047" parent="Labiritinto de Folhas/Paredes" unique_id=1659351067 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 19.544226)
+
+[node name="@Node3D@48048" parent="Labiritinto de Folhas/Paredes" unique_id=1066097222 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 19.544226)
+
+[node name="@Node3D@48049" parent="Labiritinto de Folhas/Paredes" unique_id=1008960503 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.416065, 0.17367378, 19.544226)
+
+[node name="@Node3D@48050" parent="Labiritinto de Folhas/Paredes" unique_id=691353081 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.63758, 0.17367378, 19.544226)
+
+[node name="@Node3D@48051" parent="Labiritinto de Folhas/Paredes" unique_id=1409243212 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 20.77358)
+
+[node name="@Node3D@48052" parent="Labiritinto de Folhas/Paredes" unique_id=717111874 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 20.77358)
+
+[node name="@Node3D@48053" parent="Labiritinto de Folhas/Paredes" unique_id=1065669087 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 20.77358)
+
+[node name="@Node3D@48054" parent="Labiritinto de Folhas/Paredes" unique_id=1938966449 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 20.77358)
+
+[node name="@Node3D@48055" parent="Labiritinto de Folhas/Paredes" unique_id=165610900 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 20.77358)
+
+[node name="@Node3D@48056" parent="Labiritinto de Folhas/Paredes" unique_id=648260178 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 20.77358)
+
+[node name="@Node3D@48057" parent="Labiritinto de Folhas/Paredes" unique_id=1026862919 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 20.77358)
+
+[node name="@Node3D@48058" parent="Labiritinto de Folhas/Paredes" unique_id=1333598095 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 20.77358)
+
+[node name="@Node3D@48059" parent="Labiritinto de Folhas/Paredes" unique_id=304939625 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007841468, 0.17367378, 21.987253)
+
+[node name="@Node3D@48060" parent="Labiritinto de Folhas/Paredes" unique_id=1432963058 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136726, 0.17367378, 21.987253)
+
+[node name="@Node3D@48061" parent="Labiritinto de Folhas/Paredes" unique_id=660191442 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 21.987253)
+
+[node name="@Node3D@48062" parent="Labiritinto de Folhas/Paredes" unique_id=1871844806 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 21.987253)
+
+[node name="@Node3D@48063" parent="Labiritinto de Folhas/Paredes" unique_id=1125386307 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 21.987253)
+
+[node name="@Node3D@48064" parent="Labiritinto de Folhas/Paredes" unique_id=997071969 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 21.987253)
+
+[node name="@Node3D@48065" parent="Labiritinto de Folhas/Paredes" unique_id=2064150205 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 21.987253)
+
+[node name="@Node3D@48066" parent="Labiritinto de Folhas/Paredes" unique_id=585541496 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 21.987253)
+
+[node name="@Node3D@48067" parent="Labiritinto de Folhas/Paredes" unique_id=1814920482 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 21.987253)
+
+[node name="@Node3D@48068" parent="Labiritinto de Folhas/Paredes" unique_id=370841160 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 21.987253)
+
+[node name="@Node3D@48069" parent="Labiritinto de Folhas/Paredes" unique_id=1544336265 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 21.987253)
+
+[node name="@Node3D@48070" parent="Labiritinto de Folhas/Paredes" unique_id=1729947386 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 21.987253)
+
+[node name="@Node3D@48071" parent="Labiritinto de Folhas/Paredes" unique_id=1060665957 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 21.987253)
+
+[node name="@Node3D@48072" parent="Labiritinto de Folhas/Paredes" unique_id=591785410 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 21.987253)
+
+[node name="@Node3D@48073" parent="Labiritinto de Folhas/Paredes" unique_id=551141596 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 21.987253)
+
+[node name="@Node3D@48074" parent="Labiritinto de Folhas/Paredes" unique_id=153106775 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 21.987253)
+
+[node name="@Node3D@48075" parent="Labiritinto de Folhas/Paredes" unique_id=1389074909 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 21.987253)
+
+[node name="@Node3D@48076" parent="Labiritinto de Folhas/Paredes" unique_id=1305683505 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 21.987253)
+
+[node name="@Node3D@48077" parent="Labiritinto de Folhas/Paredes" unique_id=1187524751 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 21.987253)
+
+[node name="@Node3D@48078" parent="Labiritinto de Folhas/Paredes" unique_id=974235292 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 21.995094)
+
+[node name="@Node3D@48079" parent="Labiritinto de Folhas/Paredes" unique_id=881016865 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 21.995094)
+
+[node name="@Node3D@48080" parent="Labiritinto de Folhas/Paredes" unique_id=502424883 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 21.987253)
+
+[node name="@Node3D@48081" parent="Labiritinto de Folhas/Paredes" unique_id=1625717726 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 21.987253)
+
+[node name="@Node3D@48082" parent="Labiritinto de Folhas/Paredes" unique_id=1934146977 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 21.987253)
+
+[node name="@Node3D@48083" parent="Labiritinto de Folhas/Paredes" unique_id=661463254 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 21.995094)
+
+[node name="@Node3D@48084" parent="Labiritinto de Folhas/Paredes" unique_id=1817484202 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 23.216608)
+
+[node name="@Node3D@48085" parent="Labiritinto de Folhas/Paredes" unique_id=1551701175 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 23.216608)
+
+[node name="@Node3D@48086" parent="Labiritinto de Folhas/Paredes" unique_id=983439066 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.772113, 0.17367378, 23.216608)
+
+[node name="@Node3D@48087" parent="Labiritinto de Folhas/Paredes" unique_id=532712253 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 23.216608)
+
+[node name="@Node3D@48088" parent="Labiritinto de Folhas/Paredes" unique_id=1265192688 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 23.216608)
+
+[node name="@Node3D@48089" parent="Labiritinto de Folhas/Paredes" unique_id=1122609537 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 23.216608)
+
+[node name="@Node3D@48090" parent="Labiritinto de Folhas/Paredes" unique_id=130768432 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 23.216608)
+
+[node name="@Node3D@48091" parent="Labiritinto de Folhas/Paredes" unique_id=496991159 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 23.216608)
+
+[node name="@Node3D@48092" parent="Labiritinto de Folhas/Paredes" unique_id=849129567 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 24.438124)
+
+[node name="@Node3D@48093" parent="Labiritinto de Folhas/Paredes" unique_id=595749426 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 24.430283)
+
+[node name="@Node3D@48094" parent="Labiritinto de Folhas/Paredes" unique_id=1784359398 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 24.430283)
+
+[node name="@Node3D@48095" parent="Labiritinto de Folhas/Paredes" unique_id=375168496 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 24.430283)
+
+[node name="@Node3D@48096" parent="Labiritinto de Folhas/Paredes" unique_id=1078981677 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 24.430283)
+
+[node name="@Node3D@48097" parent="Labiritinto de Folhas/Paredes" unique_id=500567912 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 24.430283)
+
+[node name="@Node3D@48098" parent="Labiritinto de Folhas/Paredes" unique_id=132781650 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 24.430283)
+
+[node name="@Node3D@48099" parent="Labiritinto de Folhas/Paredes" unique_id=1569791651 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 24.430283)
+
+[node name="@Node3D@48100" parent="Labiritinto de Folhas/Paredes" unique_id=1127818371 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 24.430283)
+
+[node name="@Node3D@48101" parent="Labiritinto de Folhas/Paredes" unique_id=19445372 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 24.430283)
+
+[node name="@Node3D@48102" parent="Labiritinto de Folhas/Paredes" unique_id=516083409 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 24.430283)
+
+[node name="@Node3D@48103" parent="Labiritinto de Folhas/Paredes" unique_id=1754527097 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 24.430283)
+
+[node name="@Node3D@48104" parent="Labiritinto de Folhas/Paredes" unique_id=2027679632 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 24.430283)
+
+[node name="@Node3D@48105" parent="Labiritinto de Folhas/Paredes" unique_id=1643391169 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 24.438124)
+
+[node name="@Node3D@48106" parent="Labiritinto de Folhas/Paredes" unique_id=217558887 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 24.438124)
+
+[node name="@Node3D@48107" parent="Labiritinto de Folhas/Paredes" unique_id=1775329566 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 24.430283)
+
+[node name="@Node3D@48108" parent="Labiritinto de Folhas/Paredes" unique_id=1598343513 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 24.430283)
+
+[node name="@Node3D@48109" parent="Labiritinto de Folhas/Paredes" unique_id=2004173660 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 24.430283)
+
+[node name="@Node3D@48110" parent="Labiritinto de Folhas/Paredes" unique_id=53213132 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 24.430283)
+
+[node name="@Node3D@48111" parent="Labiritinto de Folhas/Paredes" unique_id=1217299715 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 24.430283)
+
+[node name="@Node3D@48112" parent="Labiritinto de Folhas/Paredes" unique_id=72025672 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 24.430283)
+
+[node name="@Node3D@48113" parent="Labiritinto de Folhas/Paredes" unique_id=285356833 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 24.430283)
+
+[node name="@Node3D@48114" parent="Labiritinto de Folhas/Paredes" unique_id=1503699766 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 24.430283)
+
+[node name="@Node3D@48115" parent="Labiritinto de Folhas/Paredes" unique_id=2028993071 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 24.438124)
+
+[node name="@Node3D@48116" parent="Labiritinto de Folhas/Paredes" unique_id=1162390441 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 25.659637)
+
+[node name="@Node3D@48117" parent="Labiritinto de Folhas/Paredes" unique_id=784928274 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 25.659637)
+
+[node name="@Node3D@48118" parent="Labiritinto de Folhas/Paredes" unique_id=1510339743 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 25.659637)
+
+[node name="@Node3D@48119" parent="Labiritinto de Folhas/Paredes" unique_id=867512779 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 25.659637)
+
+[node name="@Node3D@48120" parent="Labiritinto de Folhas/Paredes" unique_id=1530647465 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 25.659637)
+
+[node name="@Node3D@48121" parent="Labiritinto de Folhas/Paredes" unique_id=1272920401 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 25.659637)
+
+[node name="@Node3D@48122" parent="Labiritinto de Folhas/Paredes" unique_id=792752383 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 26.881151)
+
+[node name="@Node3D@48123" parent="Labiritinto de Folhas/Paredes" unique_id=422607325 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 26.881151)
+
+[node name="@Node3D@48124" parent="Labiritinto de Folhas/Paredes" unique_id=1546864805 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 26.881151)
+
+[node name="@Node3D@48125" parent="Labiritinto de Folhas/Paredes" unique_id=522725503 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 26.87331)
+
+[node name="@Node3D@48126" parent="Labiritinto de Folhas/Paredes" unique_id=1183757779 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 26.87331)
+
+[node name="@Node3D@48127" parent="Labiritinto de Folhas/Paredes" unique_id=76950067 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 26.87331)
+
+[node name="@Node3D@48128" parent="Labiritinto de Folhas/Paredes" unique_id=1248207970 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 26.87331)
+
+[node name="@Node3D@48129" parent="Labiritinto de Folhas/Paredes" unique_id=1747492435 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 26.87331)
+
+[node name="@Node3D@48130" parent="Labiritinto de Folhas/Paredes" unique_id=1652892903 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 26.87331)
+
+[node name="@Node3D@48131" parent="Labiritinto de Folhas/Paredes" unique_id=1355077882 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 26.87331)
+
+[node name="@Node3D@48132" parent="Labiritinto de Folhas/Paredes" unique_id=551676846 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 26.87331)
+
+[node name="@Node3D@48133" parent="Labiritinto de Folhas/Paredes" unique_id=1893119100 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 26.87331)
+
+[node name="@Node3D@48134" parent="Labiritinto de Folhas/Paredes" unique_id=1566352796 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 26.87331)
+
+[node name="@Node3D@48135" parent="Labiritinto de Folhas/Paredes" unique_id=752899278 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 26.87331)
+
+[node name="@Node3D@48136" parent="Labiritinto de Folhas/Paredes" unique_id=17930818 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 26.87331)
+
+[node name="@Node3D@48137" parent="Labiritinto de Folhas/Paredes" unique_id=1342817481 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 26.87331)
+
+[node name="@Node3D@48138" parent="Labiritinto de Folhas/Paredes" unique_id=1070055884 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 26.87331)
+
+[node name="@Node3D@48139" parent="Labiritinto de Folhas/Paredes" unique_id=618213330 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 26.881151)
+
+[node name="@Node3D@48140" parent="Labiritinto de Folhas/Paredes" unique_id=2111173881 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 26.87331)
+
+[node name="@Node3D@48141" parent="Labiritinto de Folhas/Paredes" unique_id=1589581043 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 26.87331)
+
+[node name="@Node3D@48142" parent="Labiritinto de Folhas/Paredes" unique_id=340436792 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 26.87331)
+
+[node name="@Node3D@48143" parent="Labiritinto de Folhas/Paredes" unique_id=1185446119 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 26.87331)
+
+[node name="@Node3D@48144" parent="Labiritinto de Folhas/Paredes" unique_id=774246703 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 26.87331)
+
+[node name="@Node3D@48145" parent="Labiritinto de Folhas/Paredes" unique_id=596788448 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.416065, 0.17367378, 26.87331)
+
+[node name="@Node3D@48146" parent="Labiritinto de Folhas/Paredes" unique_id=1589579330 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.63758, 0.17367378, 26.87331)
+
+[node name="@Node3D@48147" parent="Labiritinto de Folhas/Paredes" unique_id=217925835 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 28.102665)
+
+[node name="@Node3D@48148" parent="Labiritinto de Folhas/Paredes" unique_id=355610784 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 28.102665)
+
+[node name="@Node3D@48149" parent="Labiritinto de Folhas/Paredes" unique_id=60072939 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 28.102665)
+
+[node name="@Node3D@48150" parent="Labiritinto de Folhas/Paredes" unique_id=622177574 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 28.102665)
+
+[node name="@Node3D@48151" parent="Labiritinto de Folhas/Paredes" unique_id=2129397238 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 28.102665)
+
+[node name="@Node3D@48152" parent="Labiritinto de Folhas/Paredes" unique_id=1140186893 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 28.102665)
+
+[node name="@Node3D@48153" parent="Labiritinto de Folhas/Paredes" unique_id=1751324864 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 28.102665)
+
+[node name="@Node3D@48154" parent="Labiritinto de Folhas/Paredes" unique_id=1443030597 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 28.102665)
+
+[node name="@Node3D@48155" parent="Labiritinto de Folhas/Paredes" unique_id=365323695 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 28.102665)
+
+[node name="@Node3D@48156" parent="Labiritinto de Folhas/Paredes" unique_id=1435266067 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007841468, 0.17367378, 29.316338)
+
+[node name="@Node3D@48157" parent="Labiritinto de Folhas/Paredes" unique_id=941855643 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136726, 0.17367378, 29.316338)
+
+[node name="@Node3D@48158" parent="Labiritinto de Folhas/Paredes" unique_id=1885016475 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 29.316338)
+
+[node name="@Node3D@48159" parent="Labiritinto de Folhas/Paredes" unique_id=1946996541 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 29.316338)
+
+[node name="@Node3D@48160" parent="Labiritinto de Folhas/Paredes" unique_id=1700679032 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 29.316338)
+
+[node name="@Node3D@48161" parent="Labiritinto de Folhas/Paredes" unique_id=1814691594 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 29.316338)
+
+[node name="@Node3D@48162" parent="Labiritinto de Folhas/Paredes" unique_id=1640732038 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 29.316338)
+
+[node name="@Node3D@48163" parent="Labiritinto de Folhas/Paredes" unique_id=744268289 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 29.316338)
+
+[node name="@Node3D@48164" parent="Labiritinto de Folhas/Paredes" unique_id=1351941606 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 29.316338)
+
+[node name="@Node3D@48165" parent="Labiritinto de Folhas/Paredes" unique_id=1973718551 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 29.316338)
+
+[node name="@Node3D@48166" parent="Labiritinto de Folhas/Paredes" unique_id=140000534 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 29.316338)
+
+[node name="@Node3D@48167" parent="Labiritinto de Folhas/Paredes" unique_id=1144972330 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 29.316338)
+
+[node name="@Node3D@48168" parent="Labiritinto de Folhas/Paredes" unique_id=793048662 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 29.324179)
+
+[node name="@Node3D@48169" parent="Labiritinto de Folhas/Paredes" unique_id=8455802 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 29.316338)
+
+[node name="@Node3D@48170" parent="Labiritinto de Folhas/Paredes" unique_id=100619049 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 29.316338)
+
+[node name="@Node3D@48171" parent="Labiritinto de Folhas/Paredes" unique_id=1356212557 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 29.316338)
+
+[node name="@Node3D@48172" parent="Labiritinto de Folhas/Paredes" unique_id=539410141 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 29.324179)
+
+[node name="@Node3D@48173" parent="Labiritinto de Folhas/Paredes" unique_id=761260033 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 29.316338)
+
+[node name="@Node3D@48174" parent="Labiritinto de Folhas/Paredes" unique_id=58969951 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 29.316338)
+
+[node name="@Node3D@48175" parent="Labiritinto de Folhas/Paredes" unique_id=1935224755 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 29.316338)
+
+[node name="@Node3D@48176" parent="Labiritinto de Folhas/Paredes" unique_id=902101306 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 29.316338)
+
+[node name="@Node3D@48177" parent="Labiritinto de Folhas/Paredes" unique_id=106793329 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 29.316338)
+
+[node name="@Node3D@48178" parent="Labiritinto de Folhas/Paredes" unique_id=530328002 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 29.316338)
+
+[node name="@Node3D@48179" parent="Labiritinto de Folhas/Paredes" unique_id=2035258763 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 29.324179)
+
+[node name="@Node3D@48180" parent="Labiritinto de Folhas/Paredes" unique_id=482853731 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 30.545692)
+
+[node name="@Node3D@48181" parent="Labiritinto de Folhas/Paredes" unique_id=1953639306 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.886056, 0.17367378, 30.545692)
+
+[node name="@Node3D@48182" parent="Labiritinto de Folhas/Paredes" unique_id=547627337 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.658169, 0.17367378, 30.545692)
+
+[node name="@Node3D@48183" parent="Labiritinto de Folhas/Paredes" unique_id=589716229 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 30.545692)
+
+[node name="@Node3D@48184" parent="Labiritinto de Folhas/Paredes" unique_id=459338091 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 30.545692)
+
+[node name="@Node3D@48185" parent="Labiritinto de Folhas/Paredes" unique_id=1886978271 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.430283, 0.17367378, 30.545692)
+
+[node name="@Node3D@48186" parent="Labiritinto de Folhas/Paredes" unique_id=1424494422 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.759367, 0.17367378, 30.545692)
+
+[node name="@Node3D@48187" parent="Labiritinto de Folhas/Paredes" unique_id=362440961 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 30.545692)
+
+[node name="@Node3D@48188" parent="Labiritinto de Folhas/Paredes" unique_id=1659021602 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 31.767208)
+
+[node name="@Node3D@48189" parent="Labiritinto de Folhas/Paredes" unique_id=406349112 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 31.759367)
+
+[node name="@Node3D@48190" parent="Labiritinto de Folhas/Paredes" unique_id=936016493 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 31.759367)
+
+[node name="@Node3D@48191" parent="Labiritinto de Folhas/Paredes" unique_id=1011516570 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 31.759367)
+
+[node name="@Node3D@48192" parent="Labiritinto de Folhas/Paredes" unique_id=2046672836 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 31.759367)
+
+[node name="@Node3D@48193" parent="Labiritinto de Folhas/Paredes" unique_id=677502343 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 31.759367)
+
+[node name="@Node3D@48194" parent="Labiritinto de Folhas/Paredes" unique_id=1812701180 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 31.759367)
+
+[node name="@Node3D@48195" parent="Labiritinto de Folhas/Paredes" unique_id=750468450 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 31.759367)
+
+[node name="@Node3D@48196" parent="Labiritinto de Folhas/Paredes" unique_id=982811675 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 31.759367)
+
+[node name="@Node3D@48197" parent="Labiritinto de Folhas/Paredes" unique_id=1062406071 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 31.759367)
+
+[node name="@Node3D@48198" parent="Labiritinto de Folhas/Paredes" unique_id=356065187 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 31.767208)
+
+[node name="@Node3D@48199" parent="Labiritinto de Folhas/Paredes" unique_id=293394164 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 31.767208)
+
+[node name="@Node3D@48200" parent="Labiritinto de Folhas/Paredes" unique_id=7505182 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 31.767208)
+
+[node name="@Node3D@48201" parent="Labiritinto de Folhas/Paredes" unique_id=148395059 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 31.759367)
+
+[node name="@Node3D@48202" parent="Labiritinto de Folhas/Paredes" unique_id=2083651677 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 31.759367)
+
+[node name="@Node3D@48203" parent="Labiritinto de Folhas/Paredes" unique_id=2043057561 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 31.759367)
+
+[node name="@Node3D@48204" parent="Labiritinto de Folhas/Paredes" unique_id=1514933082 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 31.759367)
+
+[node name="@Node3D@48205" parent="Labiritinto de Folhas/Paredes" unique_id=607891808 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 31.759367)
+
+[node name="@Node3D@48206" parent="Labiritinto de Folhas/Paredes" unique_id=415352615 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 31.759367)
+
+[node name="@Node3D@48207" parent="Labiritinto de Folhas/Paredes" unique_id=1887303360 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 31.759367)
+
+[node name="@Node3D@48208" parent="Labiritinto de Folhas/Paredes" unique_id=2116491151 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 31.767208)
+
+[node name="@Node3D@48209" parent="Labiritinto de Folhas/Paredes" unique_id=1841220293 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 31.767208)
+
+[node name="@Node3D@48210" parent="Labiritinto de Folhas/Paredes" unique_id=1207988379 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 32.988724)
+
+[node name="@Node3D@48211" parent="Labiritinto de Folhas/Paredes" unique_id=210436835 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 32.988724)
+
+[node name="@Node3D@48212" parent="Labiritinto de Folhas/Paredes" unique_id=532519372 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 32.988724)
+
+[node name="@Node3D@48213" parent="Labiritinto de Folhas/Paredes" unique_id=38606543 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.215141, 0.17367378, 32.988724)
+
+[node name="@Node3D@48214" parent="Labiritinto de Folhas/Paredes" unique_id=774776499 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.101196, 0.17367378, 32.988724)
+
+[node name="@Node3D@48215" parent="Labiritinto de Folhas/Paredes" unique_id=449951756 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.544226, 0.17367378, 32.988724)
+
+[node name="@Node3D@48216" parent="Labiritinto de Folhas/Paredes" unique_id=329288486 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 32.988724)
+
+[node name="@Node3D@48217" parent="Labiritinto de Folhas/Paredes" unique_id=824780876 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 32.988724)
+
+[node name="@Node3D@48218" parent="Labiritinto de Folhas/Paredes" unique_id=1366404705 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.202393, 0.17367378, 32.988724)
+
+[node name="@Node3D@48219" parent="Labiritinto de Folhas/Paredes" unique_id=1509361806 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 32.988724)
+
+[node name="@Node3D@48220" parent="Labiritinto de Folhas/Paredes" unique_id=918657929 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 34.210236)
+
+[node name="@Node3D@48221" parent="Labiritinto de Folhas/Paredes" unique_id=1722037337 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.443028, 0.17367378, 34.210236)
+
+[node name="@Node3D@48222" parent="Labiritinto de Folhas/Paredes" unique_id=1043351966 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 34.202393)
+
+[node name="@Node3D@48223" parent="Labiritinto de Folhas/Paredes" unique_id=313917412 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 34.202393)
+
+[node name="@Node3D@48224" parent="Labiritinto de Folhas/Paredes" unique_id=555015667 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 34.202393)
+
+[node name="@Node3D@48225" parent="Labiritinto de Folhas/Paredes" unique_id=1356530280 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 34.202393)
+
+[node name="@Node3D@48226" parent="Labiritinto de Folhas/Paredes" unique_id=1047755397 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 34.202393)
+
+[node name="@Node3D@48227" parent="Labiritinto de Folhas/Paredes" unique_id=1894178999 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 34.202393)
+
+[node name="@Node3D@48228" parent="Labiritinto de Folhas/Paredes" unique_id=650352352 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 34.202393)
+
+[node name="@Node3D@48229" parent="Labiritinto de Folhas/Paredes" unique_id=1104957384 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 34.202393)
+
+[node name="@Node3D@48230" parent="Labiritinto de Folhas/Paredes" unique_id=128241814 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 34.202393)
+
+[node name="@Node3D@48231" parent="Labiritinto de Folhas/Paredes" unique_id=214866860 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 34.202393)
+
+[node name="@Node3D@48232" parent="Labiritinto de Folhas/Paredes" unique_id=1963788330 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 34.202393)
+
+[node name="@Node3D@48233" parent="Labiritinto de Folhas/Paredes" unique_id=261729795 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 34.202393)
+
+[node name="@Node3D@48234" parent="Labiritinto de Folhas/Paredes" unique_id=996384618 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 34.202393)
+
+[node name="@Node3D@48235" parent="Labiritinto de Folhas/Paredes" unique_id=91970839 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 34.202393)
+
+[node name="@Node3D@48236" parent="Labiritinto de Folhas/Paredes" unique_id=1814887313 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26.87331, 0.17367378, 34.210236)
+
+[node name="@Node3D@48237" parent="Labiritinto de Folhas/Paredes" unique_id=793426554 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 34.202393)
+
+[node name="@Node3D@48238" parent="Labiritinto de Folhas/Paredes" unique_id=85951543 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 34.202393)
+
+[node name="@Node3D@48239" parent="Labiritinto de Folhas/Paredes" unique_id=107502746 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 34.202393)
+
+[node name="@Node3D@48240" parent="Labiritinto de Folhas/Paredes" unique_id=872621877 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 34.202393)
+
+[node name="@Node3D@48241" parent="Labiritinto de Folhas/Paredes" unique_id=991728214 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 34.202393)
+
+[node name="@Node3D@48242" parent="Labiritinto de Folhas/Paredes" unique_id=264942686 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 34.210236)
+
+[node name="@Node3D@48243" parent="Labiritinto de Folhas/Paredes" unique_id=123768436 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.572851e-07, 0.17367378, 35.43175)
+
+[node name="@Node3D@48244" parent="Labiritinto de Folhas/Paredes" unique_id=807251342 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.329084, 0.17367378, 35.43175)
+
+[node name="@Node3D@48245" parent="Labiritinto de Folhas/Paredes" unique_id=507360980 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.987253, 0.17367378, 35.43175)
+
+[node name="@Node3D@48246" parent="Labiritinto de Folhas/Paredes" unique_id=1578536956 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.316338, 0.17367378, 35.43175)
+
+[node name="@Node3D@48247" parent="Labiritinto de Folhas/Paredes" unique_id=100794365 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36.645424, 0.17367378, 35.43175)
+
+[node name="@Node3D@48248" parent="Labiritinto de Folhas/Paredes" unique_id=307932641 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007841468, 0.17367378, 36.645424)
+
+[node name="@Node3D@48249" parent="Labiritinto de Folhas/Paredes" unique_id=595677764 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136726, 0.17367378, 36.645424)
+
+[node name="@Node3D@48250" parent="Labiritinto de Folhas/Paredes" unique_id=1770067963 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4351869, 0.17367378, 36.645424)
+
+[node name="@Node3D@48251" parent="Labiritinto de Folhas/Paredes" unique_id=1543771604 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6567006, 0.17367378, 36.645424)
+
+[node name="@Node3D@48252" parent="Labiritinto de Folhas/Paredes" unique_id=1929972683 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.878215, 0.17367378, 36.645424)
+
+[node name="@Node3D@48253" parent="Labiritinto de Folhas/Paredes" unique_id=664101864 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.099729, 0.17367378, 36.645424)
+
+[node name="@Node3D@48254" parent="Labiritinto de Folhas/Paredes" unique_id=1128466681 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321243, 0.17367378, 36.645424)
+
+[node name="@Node3D@48255" parent="Labiritinto de Folhas/Paredes" unique_id=668886599 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.542757, 0.17367378, 36.645424)
+
+[node name="@Node3D@48256" parent="Labiritinto de Folhas/Paredes" unique_id=449287558 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.764272, 0.17367378, 36.645424)
+
+[node name="@Node3D@48257" parent="Labiritinto de Folhas/Paredes" unique_id=852452659 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9857855, 0.17367378, 36.645424)
+
+[node name="@Node3D@48258" parent="Labiritinto de Folhas/Paredes" unique_id=1290665262 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2073, 0.17367378, 36.645424)
+
+[node name="@Node3D@48259" parent="Labiritinto de Folhas/Paredes" unique_id=1280651413 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.428814, 0.17367378, 36.645424)
+
+[node name="@Node3D@48260" parent="Labiritinto de Folhas/Paredes" unique_id=1826718194 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.650328, 0.17367378, 36.645424)
+
+[node name="@Node3D@48261" parent="Labiritinto de Folhas/Paredes" unique_id=451769131 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.871842, 0.17367378, 36.645424)
+
+[node name="@Node3D@48262" parent="Labiritinto de Folhas/Paredes" unique_id=2056632509 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.093355, 0.17367378, 36.645424)
+
+[node name="@Node3D@48263" parent="Labiritinto de Folhas/Paredes" unique_id=1440754431 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.31487, 0.17367378, 36.645424)
+
+[node name="@Node3D@48264" parent="Labiritinto de Folhas/Paredes" unique_id=1495318481 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.536385, 0.17367378, 36.645424)
+
+[node name="@Node3D@48265" parent="Labiritinto de Folhas/Paredes" unique_id=1160711020 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.757898, 0.17367378, 36.645424)
+
+[node name="@Node3D@48266" parent="Labiritinto de Folhas/Paredes" unique_id=1079087349 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.979412, 0.17367378, 36.645424)
+
+[node name="@Node3D@48267" parent="Labiritinto de Folhas/Paredes" unique_id=788253310 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.200926, 0.17367378, 36.645424)
+
+[node name="@Node3D@48268" parent="Labiritinto de Folhas/Paredes" unique_id=1746238163 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.422441, 0.17367378, 36.645424)
+
+[node name="@Node3D@48269" parent="Labiritinto de Folhas/Paredes" unique_id=1545586804 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.643955, 0.17367378, 36.645424)
+
+[node name="@Node3D@48270" parent="Labiritinto de Folhas/Paredes" unique_id=178282122 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.865469, 0.17367378, 36.645424)
+
+[node name="@Node3D@48271" parent="Labiritinto de Folhas/Paredes" unique_id=1602053759 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.086983, 0.17367378, 36.645424)
+
+[node name="@Node3D@48272" parent="Labiritinto de Folhas/Paredes" unique_id=196846400 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.308496, 0.17367378, 36.645424)
+
+[node name="@Node3D@48273" parent="Labiritinto de Folhas/Paredes" unique_id=1775355154 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.53001, 0.17367378, 36.645424)
+
+[node name="@Node3D@48274" parent="Labiritinto de Folhas/Paredes" unique_id=927334414 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.751526, 0.17367378, 36.645424)
+
+[node name="@Node3D@48275" parent="Labiritinto de Folhas/Paredes" unique_id=359110422 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.973038, 0.17367378, 36.645424)
+
+[node name="@Node3D@48276" parent="Labiritinto de Folhas/Paredes" unique_id=1639403826 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.19455, 0.17367378, 36.645424)
+
+[node name="@Node3D@48277" parent="Labiritinto de Folhas/Paredes" unique_id=846773613 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.416065, 0.17367378, 36.645424)
+
+[node name="@Node3D@48278" parent="Labiritinto de Folhas/Paredes" unique_id=999507887 instance=ExtResource("2_a3ys3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.63758, 0.17367378, 36.645424)
+
+[node name="Chao" type="MeshInstance3D" parent="." unique_id=1938257940]
+transform = Transform3D(21.157915, 0, 0, 0, 0.7644854, 0, 0, 0, 19.601114, 18.802, 0.3, 18.716)
+material_override = SubResource("StandardMaterial3D_0rsm7")
+mesh = SubResource("PlaneMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Chao" unique_id=384275741]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D" unique_id=1469940273]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_a3ys3")
+
+[node name="CharacterBody3D" parent="." unique_id=596251164 instance=ExtResource("3_0t4ib")]
+transform = Transform3D(0.35559353, 0, 0, 0, 0.35559353, 0, 0, 0, 0.35559353, 1.209938, 0.8617132, 1.9194334)
+
+[node name="PassosLabirinto" type="Area3D" parent="." unique_id=1922867958]
+script = ExtResource("4_a3ys3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PassosLabirinto" unique_id=1365980949]
+transform = Transform3D(15.659514, 0, 0, 0, 1, 0, 0, 0, 1, 19.340227, 3.7260895, 18.758987)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="EventoFalso" parent="." unique_id=2072527619 instance=ExtResource("6_xkcxi")]
+transform = Transform3D(-0.9999854, 0, -0.005406679, 0, 1, 0, 0.005406679, 0, -0.9999854, 1.3020405, 1.26455, 21.28508)
+
+[node name="AreadeEvento" type="Node3D" parent="." unique_id=931710773 node_paths=PackedStringArray("eventos")]
+script = ExtResource("6_5yiln")
+eventos = [NodePath("../EventoFalso"), null]
+
+[node name="Evento1" type="Area3D" parent="AreadeEvento" unique_id=1501983977 node_paths=PackedStringArray("evento_vulto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.27478)
+script = ExtResource("7_5yiln")
+evento_vulto = NodePath("Vultoevento")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreadeEvento/Evento1" unique_id=1594188498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9581567, 1.188721, -0.59238434)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Vultoevento" type="Node3D" parent="AreadeEvento/Evento1" unique_id=1538737628]
+script = ExtResource("8_xf4dr")
+
+[node name="Vulto" parent="AreadeEvento/Evento1/Vultoevento" unique_id=341327415 instance=ExtResource("8_ltuwf")]
+transform = Transform3D(-0.99954075, 0, 0.03030328, 0, 1, 0, -0.03030328, 0, -0.99954075, 1.1252259, 1.2863567, 1.7620487)
+
+[node name="SomSusto" type="AudioStreamPlayer3D" parent="AreadeEvento/Evento1/Vultoevento" unique_id=1426221040]
+stream = ExtResource("9_xf4dr")
+
+[node name="Evento5" type="Area3D" parent="AreadeEvento" unique_id=1858643304 node_paths=PackedStringArray("evento_vulto")]
+transform = Transform3D(-0.99614644, 0, -0.08770587, 0, 1, 0, 0.08770587, 0, -0.99614644, 6.811784, 0, 3.423014)
+script = ExtResource("7_5yiln")
+evento_vulto = NodePath("Vultoevento")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreadeEvento/Evento5" unique_id=1984726921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9581567, 1.188721, -0.59238434)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Vultoevento" type="Node3D" parent="AreadeEvento/Evento5" unique_id=742495468]
+script = ExtResource("8_xf4dr")
+
+[node name="Vulto" parent="AreadeEvento/Evento5/Vultoevento" unique_id=1074938300 instance=ExtResource("8_ltuwf")]
+transform = Transform3D(-0.99954104, 0, 0.030303292, 0, 1, 0, -0.030303292, 0, -0.99954104, 1.327548, 1.2863567, 2.1692123)
+
+[node name="SomSusto" type="AudioStreamPlayer3D" parent="AreadeEvento/Evento5/Vultoevento" unique_id=1574117144]
+stream = ExtResource("9_xf4dr")
+
+[node name="Evento2" type="Area3D" parent="AreadeEvento" unique_id=1658900093 node_paths=PackedStringArray("evento")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.27478)
+script = ExtResource("8_y5kid")
+evento = NodePath("../../EventoFalso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreadeEvento/Evento2" unique_id=1769503613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.76846, 1.188721, 14.944923)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Evento3" type="Area3D" parent="AreadeEvento" unique_id=258394259 node_paths=PackedStringArray("evento")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.27478)
+script = ExtResource("8_y5kid")
+evento = NodePath("../../EventoFalso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreadeEvento/Evento3" unique_id=192284922]
+transform = Transform3D(0.038817145, 0, -0.99924636, 0, 1, 0, 0.99924636, 0, 0.038817145, 20.51464, 1.188721, -5.840954)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Evento4" type="Area3D" parent="AreadeEvento" unique_id=468528720 node_paths=PackedStringArray("evento")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.27478)
+script = ExtResource("8_y5kid")
+evento = NodePath("../../EventoFalso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreadeEvento/Evento4" unique_id=1779757420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.977234, 1.188721, -9.261285)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Box" type="MeshInstance3D" parent="." unique_id=451083715]
+transform = Transform3D(-9.195586, 0.33574528, 4.002396e-08, 0, -1.0969297e-06, 9.201713, 0.3357453, 9.195585, 1.0961993e-06, 36.01015, 0.41581607, 0.81966543)
+mesh = SubResource("ArrayMesh_68gah")
+
+[node name="Saida" type="MeshInstance3D" parent="." unique_id=732310282]
+transform = Transform3D(42.959827, 0, 0, 0, -5.1212105e-06, 62.215546, 0, -42.959824, -7.4166715e-06, 14.559064, 0.06769538, -0.068680525)
+mesh = SubResource("ArrayMesh_4y2oa")
+
+[node name="Fim?" type="MeshInstance3D" parent="." unique_id=1472104482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.522656, -0.30241805, -12.998952)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fim?" unique_id=547568178]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fim?/StaticBody3D" unique_id=1168797523]
+shape = SubResource("ConcavePolygonShape3D_68gah")
+
+[node name="Fim?4" type="MeshInstance3D" parent="." unique_id=1780833771]
+transform = Transform3D(1, 0, 0, 0, 0.13122422, 0, 0, 0, 1, 14.522656, 3.4441793, -12.998952)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fim?4" unique_id=1140421744]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fim?4/StaticBody3D" unique_id=190532284]
+shape = SubResource("ConcavePolygonShape3D_68gah")
+
+[node name="Fim?2" type="MeshInstance3D" parent="." unique_id=986352518]
+transform = Transform3D(0.18788703, 0, 0, 0, 3.0464394, 0, 0, 0, 1, 12.24241, 1.5890467, -12.998821)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fim?2" unique_id=907151082]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fim?2/StaticBody3D" unique_id=388296485]
+shape = SubResource("ConcavePolygonShape3D_68gah")
+
+[node name="Fim?3" type="MeshInstance3D" parent="." unique_id=906613613]
+transform = Transform3D(0.18788703, 0, 0, 0, 3.0464394, 0, 0, 0, 1, 16.875444, 1.5890467, -12.998821)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fim?3" unique_id=1793867048]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fim?3/StaticBody3D" unique_id=1165414022]
+shape = SubResource("ConcavePolygonShape3D_68gah")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=464985753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.522656, -0.30241805, -12.998952)
+shape = SubResource("ConcavePolygonShape3D_ed42d")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=673739405]
+environment = SubResource("Environment_g4v7s")
+
+[node name="FimdoLabririnto" type="Area3D" parent="." unique_id=117562963]
+script = ExtResource("15_ed42d")
+proxima_cena = "uid://dw7g0hoxcl42y"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FimdoLabririnto" unique_id=1239263526]
+transform = Transform3D(2.8340268, 0, 0, 0, 3.3281662, 0, 0, 0, 1, 14.637325, 1.821351, -15.689514)
+shape = SubResource("BoxShape3D_57qmd")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1241424209]
+transform = Transform3D(-0.0022317355, 0, 0.046742667, 0, 0.046795916, 0, -0.046742667, 0, -0.0022317355, 22.533651, 0.9728308, 35.400032)
+texture = ExtResource("16_ujcmx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=237213679]
+stream = ExtResource("17_3jbtq")
+volume_db = -7.333
+autoplay = true

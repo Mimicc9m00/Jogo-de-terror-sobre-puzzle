@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://kv37xss8biiu"]
+
+[ext_resource type="Script" uid="uid://dguvf7akj7xln" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://hucui62thikh" path="res://Itens coletaveis/Lanterna/lowpoly_flashlight__lanterna.glb" id="2_e80uo"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="2_kpjcp"]
+[ext_resource type="AudioStream" uid="uid://c8tyrfh2c7m71" path="res://Sons/CenaMain/passonaagua.mp3" id="3_kne1u"]
+[ext_resource type="AudioStream" uid="uid://bxvp8tw4njwjp" path="res://Sons/Ato2/armario.mp3" id="5_cxr5p"]
+[ext_resource type="AudioStream" uid="uid://clg3ggygkrew2" path="res://Sons/Ato2/passos jogador.mp3" id="6_tdg3f"]
+[ext_resource type="AudioStream" uid="uid://cxmmphux67gdb" path="res://Sons/Ato3/Passoslabirinto.mp3" id="7_dtqjt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
+albedo_color = Color(1, 0, 0.69411767, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_yf5fn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("2_kpjcp")
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=596251164 groups=["player"]]
+script = ExtResource("1_xhfnw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=297544523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45792174, -0.14817095)
+
+[node name="Sketchfab_Scene" parent="Camera3D" unique_id=539711592 instance=ExtResource("2_e80uo")]
+transform = Transform3D(0.093434304, 0, -0.99562544, 0, 1, 0, 0.99562544, 0, 0.093434304, 0.45510212, -0.28603208, -0.11875713)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1384098718]
+light_energy = 2.5
+shadow_enabled = true
+spot_range = 25.0
+spot_angle = 35.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1337294372]
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=898275252]
+mesh = SubResource("CapsuleMesh_g4v7s")
+
+[node name="FiltroDecamera" type="CanvasLayer" parent="." unique_id=1625664516]
+
+[node name="ColorRect" type="ColorRect" parent="FiltroDecamera" unique_id=402693796]
+material = SubResource("ShaderMaterial_g4v7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)
+
+[node name="SomPassos" type="AudioStreamPlayer3D" parent="." unique_id=1540938862]
+stream = ExtResource("3_kne1u")
+volume_db = -4.065
+unit_size = 27.74
+max_db = -6.813
+pitch_scale = 1.07
+
+[node name="SomEntrarArmario" type="AudioStreamPlayer" parent="." unique_id=2032087053]
+stream = ExtResource("5_cxr5p")
+
+[node name="SomPassosArea" type="AudioStreamPlayer3D" parent="." unique_id=721956690]
+stream = ExtResource("6_tdg3f")
+max_db = -0.74
+pitch_scale = 0.84
+
+[node name="SomPassosLabirinto" type="AudioStreamPlayer3D" parent="." unique_id=240198975]
+stream = ExtResource("7_dtqjt")
+volume_db = -2.148
+max_db = -4.665
+
+[node name="Stamina" type="CanvasLayer" parent="." unique_id=1876655418]
+
+[node name="ProgressBar" type="ProgressBar" parent="Stamina" unique_id=446780373]
+offset_left = 1824.0
+offset_top = 1013.00006
+offset_right = 1828.0
+offset_bottom = 1040.0
+scale = Vector2(2.75972, 1.5611963)
+value = 100.0

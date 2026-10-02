@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dw7g0hoxcl42y"]
+
+[ext_resource type="Script" uid="uid://c2ht154t0cl1q" path="res://Transicoes/transicao_5.gd" id="1_6kgy8"]
+[ext_resource type="AudioStream" uid="uid://bc0uj3ctkimu3" path="res://Sons/trancisao/transition1.mp3" id="2_o4duj"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="3_t5bsm"]
+[ext_resource type="Texture2D" uid="uid://c7c00oc4wiag6" path="res://Textos/voce esta pronto.png" id="4_jv122"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihd1r"]
+shader = ExtResource("3_t5bsm")
+
+[node name="transicao5" type="Control" unique_id=163902740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6kgy8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1777738428]
+layout_mode = 0
+offset_right = 1910.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=894147331]
+stream = ExtResource("2_o4duj")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=495726841]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=314690760]
+material = SubResource("ShaderMaterial_ihd1r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)
+
+[node name="VoceEstaPronto" type="Sprite2D" parent="." unique_id=1820234961]
+position = Vector2(944.00006, 525.99994)
+scale = Vector2(0.6516607, 0.7508504)
+texture = ExtResource("4_jv122")

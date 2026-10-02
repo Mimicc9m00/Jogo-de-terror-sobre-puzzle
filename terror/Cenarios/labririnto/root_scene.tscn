@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5jovas5qasak"]
+
+[ext_resource type="PackedScene" uid="uid://b30luk1ed30xm" path="res://Cenarios/labririnto/parede do labririnto.glb" id="1_vmk25"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1.3510132, 1.4326172, 0.8076172)
+
+[node name="Root Scene" unique_id=998889708 instance=ExtResource("1_vmk25")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1660828435]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1375406274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004058838, 0.67626953, -0.017089844)
+shape = SubResource("BoxShape3D_g4v7s")

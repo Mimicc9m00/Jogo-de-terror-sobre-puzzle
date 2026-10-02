@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cbl2ey6npam83"]
+
+[ext_resource type="Script" uid="uid://d2304ouodifgp" path="res://Transicoes/transicao_3.gd" id="1_junrx"]
+[ext_resource type="AudioStream" uid="uid://bc0uj3ctkimu3" path="res://Sons/trancisao/transition1.mp3" id="2_ohrps"]
+[ext_resource type="Shader" uid="uid://c4jkt7f7wfpka" path="res://Player.gdshader" id="3_bgvts"]
+[ext_resource type="Texture2D" uid="uid://crnjpw4w3abet" path="res://Textos/quem sou eu.png" id="3_junrx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihd1r"]
+shader = ExtResource("3_bgvts")
+
+[node name="transicao3" type="Control" unique_id=163902740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_junrx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1777738428]
+layout_mode = 0
+offset_right = 1910.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=894147331]
+stream = ExtResource("2_ohrps")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=495726841]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=314690760]
+material = SubResource("ShaderMaterial_ihd1r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.007843138, 1, 1)
+
+[node name="QuemSouEu" type="Sprite2D" parent="." unique_id=2113239615]
+position = Vector2(951.00006, 512)
+scale = Vector2(0.6056604, 0.67701864)
+texture = ExtResource("3_junrx")
