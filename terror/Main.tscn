@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://4o02w2lekh6x" path="res://addons/zylann.hterrain/hterrain.gd" id="1_fos0i"]
 [ext_resource type="Resource" uid="uid://m8otg6nm16nm" path="res://DataDirectoryHterrain/data.hterrain" id="2_3dxm6"]
 [ext_resource type="Script" uid="uid://cxduo8b833uoc" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_lgr22"]
-[ext_resource type="Texture2D" uid="uid://bibmvmgpp2we" path="res://TexturasDeTerreno/TerraSemGrama/GroundDirtRocky020_COL_2K.jpg" id="4_trn2v"]
+[ext_resource type="Texture2D" uid="uid://dkmu6mra1st6t" path="res://Main_slot0_albedo_bump.png" id="4_devvj"]
+[ext_resource type="Texture2D" uid="uid://cahobjssgpn0c" path="res://Main_slot1_albedo_bump.png" id="5_3b0ty"]
 [ext_resource type="PackedScene" uid="uid://btof3or6sk31f" path="res://Trees/BigTree2.tscn" id="6_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://bttrujsbfrgre" path="res://Main_slot0_normal_roughness.png" id="6_bg4s2"]
 [ext_resource type="PackedScene" uid="uid://47jwksj37lhd" path="res://Trees/BigTree.tscn" id="7_03owx"]
+[ext_resource type="Texture2D" uid="uid://cey4fwxpbhw0s" path="res://Main_slot1_normal_roughness.png" id="7_hhcpw"]
 [ext_resource type="PackedScene" uid="uid://blek47r8wdhn6" path="res://Trees/Tree3.tscn" id="8_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://clekvxemnh63r" path="res://Trees/Tree2.tscn" id="9_20pc6"]
 [ext_resource type="PackedScene" uid="uid://kv37xss8biiu" path="res://Player.tscn" id="10_wkp8b"]
@@ -19,17 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://5kxnq65o23mb" path="res://Cenarios/Crusificado/Crusificado.tscn" id="18_kjvhd"]
 [ext_resource type="AudioStream" uid="uid://c1rer3efljkgf" path="res://Sons/CenaMain/Chuva.mp3" id="19_5tuhn"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wkp8b"]
-load_path = "res://.godot/imported/slot1_albedo_bump.png-b53261a16041db9e02c2ba5a4c5b7596.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_20pc6"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5vvyt"]
-
 [sub_resource type="Resource" id="Resource_c6i3y"]
 script = ExtResource("3_lgr22")
 mode = 0
-textures = [[ExtResource("4_trn2v"), SubResource("CompressedTexture2D_wkp8b")], [SubResource("CompressedTexture2D_20pc6"), SubResource("CompressedTexture2D_5vvyt")]]
+textures = [[ExtResource("4_devvj"), ExtResource("5_3b0ty")], [ExtResource("6_bg4s2"), ExtResource("7_hhcpw")]]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sc1dx"]
 emission_shape = 3

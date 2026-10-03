@@ -1876,11 +1876,10 @@ script = ExtResource("1_ouk20")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1181807823]
 layout_mode = 0
-offset_left = -8.000008
-offset_top = -134.0
-offset_right = 504.0
-offset_bottom = 378.0
-scale = Vector2(5.4344997, 3.1191988)
+offset_top = -6.000001
+offset_right = 512.0
+offset_bottom = 506.0
+scale = Vector2(3.7503004, 2.1052947)
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=767992621]
 handle_input_locally = false

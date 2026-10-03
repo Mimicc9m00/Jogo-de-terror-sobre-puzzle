@@ -20,8 +20,15 @@ func selecionar_quadro(simbolo: String) -> void:
 
 	sequencia_atual.append(simbolo)
 
+	var indice_atual := sequencia_atual.size() - 1
+
+	if sequencia_atual[indice_atual] != sequencia_correta[indice_atual]:
+		sequencia_atual.clear()
+		return
+		
 	if sequencia_atual.size() >= sequencia_correta.size():
 		_verificar_sequencia()
+
 
 func _verificar_sequencia() -> void:
 
@@ -29,6 +36,7 @@ func _verificar_sequencia() -> void:
 		_concluir_puzzle()
 	else:
 		sequencia_atual.clear()
+
 
 func _concluir_puzzle() -> void:
 	puzzle_concluido = true
