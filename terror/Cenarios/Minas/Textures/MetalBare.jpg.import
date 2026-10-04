@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gi7toektuuai"
-path.s3tc="res://.godot/imported/MetalBare.jpg-2f1b11b8700956fcf1cca36e8667a4b2.s3tc.ctex"
+path.s3tc="res://.godot/imported/MetalBare.jpg-1bfb1b7470cb50626aee68f9cdf4073f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/MetalBare.jpg"
-dest_files=["res://.godot/imported/MetalBare.jpg-2f1b11b8700956fcf1cca36e8667a4b2.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/MetalBare.jpg"
+dest_files=["res://.godot/imported/MetalBare.jpg-1bfb1b7470cb50626aee68f9cdf4073f.s3tc.ctex"]
 
 [params]
 

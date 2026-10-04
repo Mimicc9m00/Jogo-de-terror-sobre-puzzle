@@ -6990,7 +6990,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0263844, 1.2234914, -10.524
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02404, 1.2720978, -10.577169)
 
 [node name="MonstroAto2" parent="." unique_id=291623176 instance=ExtResource("4_i31cg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82353044, 0.11884787, -0.7661091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82353044, 0.11884787, 23.57851)
 
 [node name="AreaPassos" type="Area3D" parent="." unique_id=1124381477]
 script = ExtResource("5_80alh")
@@ -7056,7 +7056,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37348175, -0.7803688, -3.95
 shape = SubResource("BoxShape3D_yf5fn")
 
 [node name="Chaves" type="Node3D" parent="." unique_id=1083342279 groups=["Chaves"]]
-visible = false
 
 [node name="Chave1" type="Sprite3D" parent="Chaves" unique_id=1712013640]
 transform = Transform3D(0.040121116, 0, 0, 0, -0.0005023023, 0.0401157, 0, -0.030575547, -0.0006590304, 0, 3.25083, 0)

@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://4o02w2lekh6x" path="res://addons/zylann.hterrain/hterrain.gd" id="1_i5kgt"]
 [ext_resource type="Resource" uid="uid://m8otg6nm16nm" path="res://DataDirectoryHterrain/data.hterrain" id="2_srkdy"]
 [ext_resource type="Script" uid="uid://cxduo8b833uoc" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_sepcq"]
-[ext_resource type="Texture2D" uid="uid://bibmvmgpp2we" path="res://TexturasDeTerreno/TerraSemGrama/GroundDirtRocky020_COL_2K.jpg" id="4_i1iak"]
+[ext_resource type="Texture2D" uid="uid://bgujqw8yx2mqj" path="res://cutscine1_slot0_albedo_bump.png" id="4_srkdy"]
+[ext_resource type="Texture2D" uid="uid://bouetm7iggjnq" path="res://cutscine1_slot1_albedo_bump.png" id="5_sepcq"]
+[ext_resource type="Texture2D" uid="uid://cism4bc8mjudn" path="res://cutscine1_slot0_normal_roughness.png" id="6_i1iak"]
 [ext_resource type="PackedScene" uid="uid://btof3or6sk31f" path="res://Trees/BigTree2.tscn" id="6_jllom"]
+[ext_resource type="Texture2D" uid="uid://c6fxrjup68wwu" path="res://cutscine1_slot1_normal_roughness.png" id="7_brwe8"]
 [ext_resource type="PackedScene" uid="uid://47jwksj37lhd" path="res://Trees/BigTree.tscn" id="7_hixv5"]
 [ext_resource type="PackedScene" uid="uid://blek47r8wdhn6" path="res://Trees/Tree3.tscn" id="8_hhyin"]
 [ext_resource type="PackedScene" uid="uid://clekvxemnh63r" path="res://Trees/Tree2.tscn" id="9_1a0xg"]
@@ -17,17 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://bok537u0qp2sd" path="res://Cenarios/bixaodacenadevideo1/horror_humanoid_creature.glb" id="15_nqhsb"]
 [ext_resource type="AudioStream" uid="uid://c1rer3efljkgf" path="res://Sons/CenaMain/Chuva.mp3" id="17_i5kgt"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wkp8b"]
-load_path = "res://.godot/imported/slot1_albedo_bump.png-b53261a16041db9e02c2ba5a4c5b7596.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_20pc6"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5vvyt"]
-
 [sub_resource type="Resource" id="Resource_c6i3y"]
 script = ExtResource("3_sepcq")
 mode = 0
-textures = [[ExtResource("4_i1iak"), SubResource("CompressedTexture2D_wkp8b")], [SubResource("CompressedTexture2D_20pc6"), SubResource("CompressedTexture2D_5vvyt")]]
+textures = [[ExtResource("4_srkdy"), ExtResource("5_sepcq")], [ExtResource("6_i1iak"), ExtResource("7_brwe8")]]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 

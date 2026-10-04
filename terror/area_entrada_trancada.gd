@@ -6,11 +6,13 @@ var jogador: CharacterBody3D = null
 var pode_interagir: bool = true
 var chave_do_olho_pegada: bool = false
 
+
 func _ready() -> void:
 	body_entered.connect(_ao_entrar)
 	body_exited.connect(_ao_sair)
 
 	add_to_group("porta_frente")
+
 
 func _ao_entrar(body: Node3D) -> void:
 	if not body.is_in_group("player"):
@@ -18,9 +20,11 @@ func _ao_entrar(body: Node3D) -> void:
 
 	jogador = body as CharacterBody3D
 
+
 func _ao_sair(body: Node3D) -> void:
 	if body == jogador:
 		jogador = null
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if jogador == null:
@@ -41,8 +45,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func abrir_porta() -> void:
-	return
-	if proxima_cena == "":
+	if proxima_cena == "res://Transicoes/transicao_4.tscn":
+		return
+
+	if proxima_cena.is_empty():
 		return
 
 	get_tree().change_scene_to_file(proxima_cena)

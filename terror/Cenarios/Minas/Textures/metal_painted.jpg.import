@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dprwwbuc0bx33"
-path.s3tc="res://.godot/imported/metal_painted.jpg-b6a8e87690b4390b0d0eff1bea53bbd2.s3tc.ctex"
+path.s3tc="res://.godot/imported/metal_painted.jpg-31eea523a6004b8a72c0b87c9aa26f62.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/metal_painted.jpg"
-dest_files=["res://.godot/imported/metal_painted.jpg-b6a8e87690b4390b0d0eff1bea53bbd2.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/metal_painted.jpg"
+dest_files=["res://.godot/imported/metal_painted.jpg-31eea523a6004b8a72c0b87c9aa26f62.s3tc.ctex"]
 
 [params]
 

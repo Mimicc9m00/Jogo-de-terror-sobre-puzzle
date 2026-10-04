@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3qaawttgyuvh"
-path.s3tc="res://.godot/imported/Farol_Emissor.png-829650ac3611adffa6f83b5d65c7ffae.s3tc.ctex"
+path.s3tc="res://.godot/imported/Farol_Emissor.png-eb4982f764332538195bc39400979c20.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/Farol_Emissor.png"
-dest_files=["res://.godot/imported/Farol_Emissor.png-829650ac3611adffa6f83b5d65c7ffae.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/Farol_Emissor.png"
+dest_files=["res://.godot/imported/Farol_Emissor.png-eb4982f764332538195bc39400979c20.s3tc.ctex"]
 
 [params]
 

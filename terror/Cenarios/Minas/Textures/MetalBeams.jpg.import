@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbaa65xe4vkqd"
-path.s3tc="res://.godot/imported/MetalBeams.jpg-dd21d77bf223829560a47d5fb83279cd.s3tc.ctex"
+path.s3tc="res://.godot/imported/MetalBeams.jpg-597e2af5f94acd9bac218cfe39141035.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/MetalBeams.jpg"
-dest_files=["res://.godot/imported/MetalBeams.jpg-dd21d77bf223829560a47d5fb83279cd.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/MetalBeams.jpg"
+dest_files=["res://.godot/imported/MetalBeams.jpg-597e2af5f94acd9bac218cfe39141035.s3tc.ctex"]
 
 [params]
 

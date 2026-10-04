@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm2od8udvce82"
-path.s3tc="res://.godot/imported/Rocks.png-56f9ed48fb958785dd9fe4f364cbd8e5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Rocks.png-3a4edd6b56470ce4cb1ad63f667f4e4f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/Rocks.png"
-dest_files=["res://.godot/imported/Rocks.png-56f9ed48fb958785dd9fe4f364cbd8e5.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/Rocks.png"
+dest_files=["res://.godot/imported/Rocks.png-3a4edd6b56470ce4cb1ad63f667f4e4f.s3tc.ctex"]
 
 [params]
 

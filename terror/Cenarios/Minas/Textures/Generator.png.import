@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://edjo07fqgw0w"
-path.s3tc="res://.godot/imported/Generator.png-e4148cf7e65f34ffb43d95a82edf491e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Generator.png-1a10b7f118c181413b3f86483640e7c0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/Generator.png"
-dest_files=["res://.godot/imported/Generator.png-e4148cf7e65f34ffb43d95a82edf491e.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/Generator.png"
+dest_files=["res://.godot/imported/Generator.png-1a10b7f118c181413b3f86483640e7c0.s3tc.ctex"]
 
 [params]
 

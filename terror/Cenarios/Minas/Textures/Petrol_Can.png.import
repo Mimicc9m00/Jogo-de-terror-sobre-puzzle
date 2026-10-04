@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5jib57bmyqke"
-path.s3tc="res://.godot/imported/Petrol_Can.png-cd67ea8bc18fde18196217a39d1b16f2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Petrol_Can.png-e689c9432d70b025f4d33c146b1d4ac4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cenarios/Minas/textures/Petrol_Can.png"
-dest_files=["res://.godot/imported/Petrol_Can.png-cd67ea8bc18fde18196217a39d1b16f2.s3tc.ctex"]
+source_file="res://Cenarios/Minas/Textures/Petrol_Can.png"
+dest_files=["res://.godot/imported/Petrol_Can.png-e689c9432d70b025f4d33c146b1d4ac4.s3tc.ctex"]
 
 [params]
 
